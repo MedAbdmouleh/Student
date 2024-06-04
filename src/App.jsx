@@ -25,7 +25,7 @@ import "./styles.css";
  */
 const siteProps = {
   name: "Abdmouleh Mohamed",
-  title: "Consulatnt Power BI",
+  title: "Consultant Power BI",
   email: "Mohamed.Abdmouleh@studentambassadors.com",
   gitHub: "MedAbdmouleh",
   instagram: "Mohamed Abdmouleh",
