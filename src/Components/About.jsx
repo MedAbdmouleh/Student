@@ -16,7 +16,7 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a image you
  * freely use on your site.
  */
-import image from "../images/motion-background.jpg";
+import image from "../images/med.jpg";
 
 const imageAltText = "purple and blue abstract background";
 
@@ -24,7 +24,7 @@ const imageAltText = "purple and blue abstract background";
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
+  "Consultant et formateur en Power BI/Power Platform, j'ai une expérience avérée dans la conception, le développement et la mise en œuvre de solutions BI. Fortes compétences en matière de conception de bases de données, d'extraction, de transformation et de chargement de données (ETL), de création de rapports et de visualisations, et de gestion de projet.";
 
 /**
  * List of some of skills or technologies you work on, are learning,
@@ -45,7 +45,7 @@ const skillsList = [
  * about you on a professional level.
  */
 const detailOrQuote =
-  "I am passionate about solving problems through innovative and creative approaches. By leveraging my experience as a data analyst, I continually look for new and better ways to make technology accessible to all. My focus is on analyzing data to uncover insights that drive engagement, enhance user experience, and ultimately lead to greater inclusivity in tech.";
+  "Ma passion pour l'analyse de données se reflète dans chacune de mes interventions. Mon objectif est d'offrir des conseils stratégiques et des formations de qualité, afin d'améliorer les performances et de favoriser une prise de décision éclairée au sein des organisations.";
 
 const About = () => {
   return (
