@@ -18,6 +18,7 @@ const services = [
     description: "Selling mock exams with real certification questions and answers.",
     color: "#FFA500", // Orange color for practice exams block
     link: "https://www.udemy.com/user/abdmoulehmohamed/",
+    target: "_blank", // Open in new tab
   },
 ];
 
@@ -79,6 +80,8 @@ const Service = () => {
           <a
             key={index}
             href={service.link}
+            target={service.target} // Add target attribute
+            rel={service.target === "_blank" ? "noopener noreferrer" : undefined} // Security best practice for new tab
             style={{
               ...serviceStyles.service,
               ...(hoveredIndex === index ? serviceStyles.serviceHovered : {}),
