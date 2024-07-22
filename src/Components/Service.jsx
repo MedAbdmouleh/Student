@@ -1,33 +1,25 @@
 import React from "react";
 
 const services = [
-  {
-    title: "Consulting",
-    description: (
-        <a href="mailto:mohamedabdelmouleh0@gmail.com" style={{ color: '#fff', textDecoration: 'underline' }}>
-          Data Engineering, Azure, Power BI, and more.
-        </a>
-      ),
-    color: "#FFA500", // Orange color for consulting block
-  },
-  {
-    title: "Training",
-    description: (
-        <a href="mailto:mohamedabdelmouleh0@gmail.com" style={{ color: '#fff', textDecoration: 'underline' }}>
-          Power BI, Azure, Power Platform, MS Fabric.
-        </a>
-      ),
-    color: "#FFA500", // Orange color for training block
-  },
-  {
-    title: "Certification Practice Exams",
-    description: (
-      <a href="https://www.udemy.com/user/abdmoulehmohamed/" style={{ color: '#fff', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
-        Selling mock exams with real certification questions and answers.
-      </a>
-    ),
-    color: "#FFA500", // Orange color for practice exams block
-  },
+  
+    {
+        title: "Consulting",
+        description: "Data Engineering, Azure, Power BI, and more.",
+        color: "#FFA500", // Orange color for consulting block
+        link: "mailto:mohamedabdelmouleh0@gmail.com",
+      },
+      {
+        title: "Training",
+        description: "Power BI, Azure, Power Platform, MS Fabric.",
+        color: "#FFA500", // Orange color for training block
+        link: "mailto:mohamedabdelmouleh0@gmail.com",
+      },
+      {
+        title: "Certification Practice Exams",
+        description: "Selling mock exams with real certification questions and answers.",
+        color: "#FFA500", // Orange color for practice exams block
+        link: "https://www.udemy.com/user/abdmoulehmohamed/",
+      },
 ];
 
 const serviceStyles = {
