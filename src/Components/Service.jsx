@@ -1,25 +1,24 @@
 import React from "react";
 
 const services = [
-  
-    {
-        title: "Consulting",
-        description: "Data Engineering, Azure, Power BI, and more.",
-        color: "#FFA500", // Orange color for consulting block
-        link: "mailto:mohamedabdelmouleh0@gmail.com",
-      },
-      {
-        title: "Training",
-        description: "Power BI, Azure, Power Platform, MS Fabric.",
-        color: "#FFA500", // Orange color for training block
-        link: "mailto:mohamedabdelmouleh0@gmail.com",
-      },
-      {
-        title: "Certification Practice Exams",
-        description: "Selling mock exams with real certification questions and answers.",
-        color: "#FFA500", // Orange color for practice exams block
-        link: "https://www.udemy.com/user/abdmoulehmohamed/",
-      },
+  {
+    title: "Consulting",
+    description: "Data Engineering, Azure, Power BI, and more.",
+    color: "#FFA500", // Orange color for consulting block
+    link: "mailto:mohamedabdelmouleh0@gmail.com",
+  },
+  {
+    title: "Training",
+    description: "Power BI, Azure, Power Platform, MS Fabric.",
+    color: "#FFA500", // Orange color for training block
+    link: "mailto:mohamedabdelmouleh0@gmail.com",
+  },
+  {
+    title: "Certification Practice Exams",
+    description: "Selling mock exams with real certification questions and answers.",
+    color: "#FFA500", // Orange color for practice exams block
+    link: "https://www.udemy.com/user/abdmoulehmohamed/",
+  },
 ];
 
 const serviceStyles = {
@@ -29,7 +28,7 @@ const serviceStyles = {
     alignItems: 'center',
     gap: '2rem',
     padding: '2rem',
-    backgroundColor: '#FDF7F0', // Light background color for the section
+    backgroundColor: '#FDF7F0', // Background color for the section
   },
   title: {
     fontSize: '2rem',
@@ -46,13 +45,15 @@ const serviceStyles = {
   },
   service: {
     width: '30%',
-    backgroundColor: '#FFA500', // Orange background color for service blocks
+    backgroundColor: '#FFA500', // Orange background color
     color: '#fff',
     padding: '2rem',
     textAlign: 'center',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     transition: 'transform 0.2s',
+    textDecoration: 'none', // Ensure no underline or default link styles
+    display: 'block', // Make sure the whole block is clickable
   },
   serviceHovered: {
     transform: 'scale(1.05)',
@@ -75,8 +76,9 @@ const Service = () => {
       <h2 style={serviceStyles.title}>Services</h2>
       <div style={serviceStyles.serviceCards}>
         {services.map((service, index) => (
-          <div
+          <a
             key={index}
+            href={service.link}
             style={{
               ...serviceStyles.service,
               ...(hoveredIndex === index ? serviceStyles.serviceHovered : {}),
@@ -86,7 +88,7 @@ const Service = () => {
           >
             <h2 style={serviceStyles.serviceTitle}>{service.title}</h2>
             <p style={serviceStyles.serviceDescription}>{service.description}</p>
-          </div>
+          </a>
         ))}
       </div>
     </section>
