@@ -1,3 +1,11 @@
+/**
+* CSS file to hold styles that apply across the application
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
+
+html,
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -11,6 +19,7 @@ body {
   margin: 0 auto;
 }
 
+/* Header Styles */
 header {
   background-color: #fff;
   padding: 1em 0;
@@ -48,11 +57,13 @@ header .btn {
   border-radius: 5px;
 }
 
+/* Home Section Styles */
 .hero {
   display: flex;
   align-items: center;
   padding: 2em 0;
   background-color: #fff;
+  position: relative;
 }
 
 .hero-content {
@@ -92,6 +103,23 @@ header .btn {
   border-radius: 10px;
 }
 
+/* About Section Styles */
+#about {
+  padding: 2em 0;
+  background-color: #fff;
+}
+
+#about h2 {
+  text-align: center;
+}
+
+#about p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Skills Section Styles */
 #skills {
   background-color: #fff;
   padding: 2em 0;
@@ -125,6 +153,7 @@ header .btn {
   color: #ff6600;
 }
 
+/* Expertise Section Styles */
 #expertise {
   background-color: #fff;
   padding: 2em 0;
@@ -152,6 +181,7 @@ header .btn {
   color: #ff6600;
 }
 
+/* Footer Styles */
 footer {
   background-color: #333;
   color: #fff;
