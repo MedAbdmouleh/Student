@@ -60,9 +60,9 @@ const Header = () => {
             <li style={headerStyles.navItem}><a href="#footer" style={headerStyles.navLink}>Contact</a></li>
           </ul>
         </nav>
-        <a href="https://example.com/path/to/Abdmouleh%20Mohamed%20-Consultant%20-%20Teach%20Lead%20BI%20(2).pdf" download style={headerStyles.btn}>
-  Download CV
-</a>
+        <a href="images/Abdmouleh Mohamed -Consultant - Teach Lead BI (2).pdf" download style={headerStyles.btn}>
+          Download CV
+        </a>
 
       </div>
     </header>
