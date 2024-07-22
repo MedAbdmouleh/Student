@@ -1,22 +1,54 @@
-import React from 'react';
-//import { Link } from 'react-router-dom'; // If using React Router for navigation
-import './Header.css'; // Import CSS for Header
+import React from "react";
+
+const headerStyles = {
+  header: {
+    backgroundColor: '#fff',
+    padding: '1em 0',
+    borderBottom: '1px solid #ddd',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  logo: {
+    fontSize: '1.5em',
+    fontWeight: 'bold',
+  },
+  navList: {
+    listStyle: 'none',
+    padding: 0,
+    display: 'flex',
+  },
+  navItem: {
+    margin: '0 1em',
+  },
+  navLink: {
+    textDecoration: 'none',
+    color: '#333',
+  },
+  btn: {
+    backgroundColor: '#ff6600',
+    color: '#fff',
+    padding: '0.5em 1em',
+    textDecoration: 'none',
+    borderRadius: '5px',
+  },
+};
 
 const Header = () => {
   return (
-    <header>
+    <header style={headerStyles.header}>
       <div className="container">
-        <div className="logo">LOGO</div>
+        <div style={headerStyles.logo}>LOGO</div>
         <nav>
-          <ul>
-            <li><Link to="#home">Home</Link></li>
-            <li><Link to="#about">About Me</Link></li>
-            <li><Link to="#services">Services</Link></li>
-            <li><Link to="#projects">Projects</Link></li>
-            <li><Link to="#contact">Contact</Link></li>
+          <ul style={headerStyles.navList}>
+            <li style={headerStyles.navItem}><a href="#home" style={headerStyles.navLink}>Home</a></li>
+            <li style={headerStyles.navItem}><a href="#about" style={headerStyles.navLink}>About Me</a></li>
+            <li style={headerStyles.navItem}><a href="#services" style={headerStyles.navLink}>Services</a></li>
+            <li style={headerStyles.navItem}><a href="#projects" style={headerStyles.navLink}>Projects</a></li>
+            <li style={headerStyles.navItem}><a href="#contact" style={headerStyles.navLink}>Contact</a></li>
           </ul>
         </nav>
-        <a href="#" className="btn">Download CV</a>
+        <a href="#" style={headerStyles.btn}>Download CV</a>
       </div>
     </header>
   );
