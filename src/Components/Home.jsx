@@ -24,11 +24,11 @@ const Home = ({ name, title }) => {
         <h1>{name}</h1>
         <h2>{title}</h2>
       </div>
-      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
+      <div style={{ position: "absolute", bottom: "3rem", left: "50%" ,textAlign: "right"}}>
         <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
       </div>
       <div style={{ position: "absolute", top: "5rem", right: "2rem", width: "20rem", textAlign: "right" }}>
-        <p>Consultant et formateur en Power BI/Power Platform, j'ai une expérience avérée dans la conception, le développement et la mise en œuvre de solutions BI. Fortes compétences en matière de conception de bases de données, d'extraction, de transformation et de chargement de données (ETL), de création de rapports et de visualisations, et de gestion de projet.</p>
+        <p>Abdmouleh Mohamed - Consultant Power BI</p>
       </div>
     </section>
   );
