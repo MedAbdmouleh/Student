@@ -8,10 +8,10 @@ const description =
 
 const skillsList = [
   "Power BI",
-  "Power Automate",
+  "Power Platform",
   "Azure",
   "Data Factory ",
-  "Fabric",
+  "MS Fabric",
   "Office 365",
 ];
 
