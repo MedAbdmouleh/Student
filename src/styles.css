@@ -1,162 +1,125 @@
+/**
+* CSS file to hold styles that apply across the application
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
+
+html,
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  width: 100%;
+}
+
+div#main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+}
+
+section.min-height {
+  min-height: 100vh;
+}
+
+section.padding {
+  padding: 5rem 0;
+}
+
+section img.background {
+  height: 100%;
+  left: 50%;
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 0);
+  width: 100vmax;
+  z-index: -1;
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 7rem;
+  font-weight: 400;
+  line-height: 0.8;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 1rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+p.large {
+  font-size: 24px;
+}
+
+p.small {
+  font-size: 15px;
+}
+
+hr {
+  margin: 2.5rem;
+}
+
+li {
+  line-height: 1.7;
+}
+
+li::marker {
+  color: #4e567e;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4e567e;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 330px 300px;
+  margin: 20px auto;
 }
 
-header {
-  background-color: #fff;
-  padding: 1em 0;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header .logo {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-header nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-}
-
-header nav ul li {
-  margin: 0 1em;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: #333;
-}
-
-header .btn {
-  background-color: #ff6600;
-  color: #fff;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  padding: 2em 0;
-  background-color: #fff;
-}
-
-.hero-content {
-  flex: 1;
-}
-
-.hero-content h1 {
-  font-size: 2.5em;
-}
-
-.hero-content h1 span {
-  color: #ff6600;
-}
-
-.hero-content h2 {
-  color: #666;
-}
-
-.hero-content p {
-  margin: 1em 0;
-}
-
-.hero-content .btn {
-  background-color: #ff6600;
-  color: #fff;
-  padding: 0.5em 1em;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.hero-image {
-  flex: 1;
-}
-
-.hero-image img {
-  width: 100%;
+.container .box {
   border-radius: 10px;
-}
-
-#skills {
-  background-color: #fff;
-  padding: 2em 0;
-}
-
-#skills h2 {
-  text-align: center;
-}
-
-#skills p {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.skills-cards {
+  border: 1px solid rgb(204, 204, 204);
   display: flex;
-  justify-content: space-around;
-  margin-top: 2em;
-}
-
-.skills-cards .card {
-  background-color: #f4f4f4;
-  padding: 1em;
-  border-radius: 5px;
-  text-align: center;
-  width: 30%;
-}
-
-.skills-cards .card h3 {
-  color: #ff6600;
-}
-
-#expertise {
-  background-color: #fff;
-  padding: 2em 0;
-}
-
-#expertise h2 {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 24px 16px;
   text-align: center;
 }
 
-.expertise-cards {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2em;
-}
-
-.expertise-cards .card {
-  background-color: #f4f4f4;
-  padding: 1em;
-  border-radius: 5px;
-  text-align: center;
-  width: 20%;
-}
-
-.expertise-cards .card h3 {
-  color: #ff6600;
-}
-
-footer {
-  
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
-  margin-top: 2em;
+img.socialIcon {
+  height: 30px;
+  width: 30px;
 }
