@@ -1,0 +1,23 @@
+#expertise {
+    background-color: #fff;
+    padding: 2em 0;
+  }
+  
+  #expertise h2 {
+    text-align: center;
+  }
+  
+  .expertise-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+  }
+  
+  .expertise-cards .card {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+    width: 20%;
+  }
+  
