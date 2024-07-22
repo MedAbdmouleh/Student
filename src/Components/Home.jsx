@@ -1,52 +1,33 @@
-/**
- * Home component
- *
- * The section at the top of the page to display image of your
- * choice, name and title that describes your career focus.
- */
-
-import React from "react";
-import arrowSvg from "../images/down-arrow.svg";
-import PropTypes from "prop-types";
-
-/**
- * Home background image
- *
- * Below is a sample image. Upload the image of your choice into the "images"
- * directory and import here for use. Then, set imageAltText to string that 
- * represents what you see in that image.
- *
- *
- * Need an image? Check out https://unsplash.com to download a photo you
- * freely use on your site.
- */
-import image from "../images/med.jpg";
-
-const imageAltText = " Abdmouleh Mohamed - Consultant Power BI";
+import React from 'react';
+import PropTypes from 'prop-types';
+import arrowSvg from '../images/down-arrow.svg'; // Ensure the correct path
+import image from '../images/med.jpg'; // Ensure the correct path
+import './Home.css'; // Import CSS for Home
 
 const Home = ({ name, title }) => {
   return (
-    <section id="home" className="min-height">
-      <img className="background" src={image} alt="" />
-      <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "17rem" }}>
-        <h1>{name}</h1>
+    <section id="home" className="hero">
+      <div className="hero-content">
+        <h1>Hi I am <span>{name}</span></h1>
         <h2>{title}</h2>
+        <p>Lorem ipsum dolor sit amet consectetur. Tristique ornare sed massa nibh lectus luctus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra.</p>
+        <a href="#" className="btn">Hire Me</a>
       </div>
-      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+      <div className="hero-image">
+        <img src={image} alt="Mohamed Abdmouleh" />
       </div>
     </section>
   );
 };
 
 Home.defaultProps = {
-  name: "",
-  title: "",
+  name: 'Mohamed Abdmouleh',
+  title: 'Consultant and Trainer in Power BI, MSBI, and Azure Data Factory',
 };
 
 Home.propTypes = {
-  name: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default Home;
