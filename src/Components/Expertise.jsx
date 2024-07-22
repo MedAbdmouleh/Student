@@ -31,20 +31,20 @@ const expertiseStyles = {
 
 const expertiseList = [
     { 
-        title: "Orange | Formateur Power BI", 
-        description: "Expert formateur spécialisé dans  Power BI." 
+        title: "Orange | Power BI Trainer", 
+        description: "Expert trainer specializing in Power BI." 
       },
       { 
-        title: "The Way Center | Formateur Power BI", 
-        description: "Formateur spécialisé dans la certification Power BI (PL-300), Power Platform, Azure, et Fabric, offrant une expertise approfondie." 
+        title: "The Way Center | Power BI Trainer", 
+        description: "Trainer specializing in Power BI certification (PL-300), Power Platform, Azure, and Fabric, offering in-depth expertise." 
       },
       { 
-        title: "CTIG | Formateur Power BI", 
-        description: "Spécialiste en formation pour la certification Power BI (PL-300) avec des compétences étendues en Power Platform, Azure, et Fabric." 
+        title: "CTIG | Power BI Trainer", 
+        description: "Specialist in training for Power BI certification (PL-300) with extensive skills in Power Platform, Azure, and Fabric." 
       },
       { 
-        title: "Ruspina | Formateur Power BI", 
-        description: "Formateur expert dans la certification Power BI (PL-300) et les technologies Power Platform, Azure, et Fabric, fournissant des solutions avancées." 
+        title: "Ruspina | Power BI Trainer", 
+        description: "Expert trainer in Power BI certification (PL-300) and technologies such as Power Platform, Azure, and Fabric, providing advanced solutions." 
       },
 ];
 

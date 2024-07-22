@@ -11,7 +11,8 @@ const Home = ({ name, title }) => {
       <div style={{ position: "relative", zIndex: 1, maxWidth: "50%", marginRight: "2rem" }}>
         <h4>Hi I am</h4>
         <h2 style={{ color: "#FFA500" }}>Abdmouleh Mohamed</h2>
-        <b><h2 style={{ color: "#FFA500" }}>Consultant MSBI & Azure Data Factory & Power BI</h2></b>
+        <br/>
+        <b><h1 style={{ color: "#FFA500" }}>Consultant MSBI & Azure Data Factory & Power BI</h1></b>
         <br />
         <h4>Consultant and trainer specializing in Power BI and Power Platform.</h4>
         <button style={{ marginTop: "1rem", padding: "0.5rem 1rem", fontSize: "1rem", cursor: "pointer", backgroundColor: "#FFA500", color: "#fff", border: "none", borderRadius: "4px" }}>
