@@ -6,6 +6,7 @@ import Expertise from "./Expertise";
 import Footer from "./Footer";
 import Header from "./Header";
 import Certification from "./Certification";
+import Service from "./Service";
 
 const Portfolio = () => {
   return (
@@ -14,6 +15,7 @@ const Portfolio = () => {
       <Skills />
       <Expertise />
       <Certification />
+      <Service />
       <Footer />
     </div>
   );
