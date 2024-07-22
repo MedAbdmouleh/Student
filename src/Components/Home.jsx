@@ -1,10 +1,3 @@
-/**
- * Home component
- *
- * The section at the top of the page to display image of your
- * choice, name and title that describes your career focus.
- */
-
 import React from "react";
 import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
@@ -16,24 +9,26 @@ import PropTypes from "prop-types";
  * directory and import here for use. Then, set imageAltText to string that 
  * represents what you see in that image.
  *
- *
  * Need an image? Check out https://unsplash.com to download a photo you
  * freely use on your site.
  */
 import image from "../images/websitedata.png";
 
-const imageAltText = " Abdmouleh Mohamed - Consultant Power BI";
+const imageAltText = "Abdmouleh Mohamed - Consultant Power BI";
 
 const Home = ({ name, title }) => {
   return (
-    <section id="home" className="min-height">
-      <img className="background" src={image} alt="" />
+    <section id="home" className="min-height" style={{ position: "relative", display: "flex", alignItems: "center" }}>
+      <img className="background" src={image} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", zIndex: -1 }} />
       <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "17rem" }}>
         <h1>{name}</h1>
         <h2>{title}</h2>
       </div>
       <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
         <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
+      </div>
+      <div style={{ position: "absolute", top: "5rem", right: "2rem", width: "20rem", textAlign: "right" }}>
+        <p>Consultant et formateur en Power BI/Power Platform, j'ai une expérience avérée dans la conception, le développement et la mise en œuvre de solutions BI. Fortes compétences en matière de conception de bases de données, d'extraction, de transformation et de chargement de données (ETL), de création de rapports et de visualisations, et de gestion de projet.</p>
       </div>
     </section>
   );
