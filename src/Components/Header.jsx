@@ -51,8 +51,8 @@ const Header = () => {
           <ul style={headerStyles.navList}>
             <li style={headerStyles.navItem}><a href="#home" style={headerStyles.navLink}>Home</a></li>
             <li style={headerStyles.navItem}><a href="#about" style={headerStyles.navLink}>About Me</a></li>
-            <li style={headerStyles.navItem}><a href="#services" style={headerStyles.navLink}>Services</a></li>
-            <li style={headerStyles.navItem}><a href="#projects" style={headerStyles.navLink}>Projects</a></li>
+            <li style={headerStyles.navItem}><a href="#experiance" style={headerStyles.navLink}>Services</a></li>
+            <li style={headerStyles.navItem}><a href="#services" style={headerStyles.navLink}>Projects</a></li>
             <li style={headerStyles.navItem}><a href="#contact" style={headerStyles.navLink}>Contact</a></li>
           </ul>
         </nav>
