@@ -11,8 +11,8 @@ const Home = ({ name, title }) => {
       <div style={{ position: "relative", zIndex: 1, maxWidth: "50%", marginRight: "2rem" }}>
         <h1>{name}</h1>
         <h2>{title}</h2>
-        <button style={{ marginTop: "1rem", padding: "0.5rem 1rem", fontSize: "1rem", cursor: "pointer", backgroundColor: "#007BFF", color: "#fff", border: "none", borderRadius: "4px" }}>
-          Learn More
+        <button style={{ marginTop: "1rem", padding: "0.5rem 1rem", fontSize: "1rem", cursor: "pointer", backgroundColor: "#FFA500", color: "#fff", border: "none", borderRadius: "4px" }}>
+          Service
         </button>
       </div>
       <img src={image} alt={imageAltText} style={{ width: "50%", height: "auto", objectFit: "cover", position: "absolute", right: 0, top: 0, zIndex: -1 }} />
