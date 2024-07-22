@@ -1,7 +1,7 @@
 import React from "react";
 import certification1 from "../images/pl300.jpg"; // Replace with your actual image paths
 import certification2 from "../images/pl200.png";
-import certification3 from "../images/fabric.png";
+import certification3 from "../images/Dp600.png";
 import certification4 from "../images/pl500.webp";
 
 const certifications = [
