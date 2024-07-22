@@ -58,6 +58,7 @@ const Service = () => {
   return (
     <section style={serviceStyles.container} id="services">
     <h2 style={serviceStyles.titlet}>Experience as an expert trainer</h2>
+    <div>
       {services.map((service, index) => (
         <div
           key={index}
@@ -71,7 +72,9 @@ const Service = () => {
           <h2 style={serviceStyles.title}>{service.title}</h2>
           <p style={serviceStyles.description}>{service.description}</p>
         </div>
+        
       ))}
+      </div>
     </section>
   );
 };
