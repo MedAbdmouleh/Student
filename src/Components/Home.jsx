@@ -15,9 +15,11 @@ const Home = ({ name, title }) => {
         <b><h2 style={{ color: "#FFA500" }}>Consultant MSBI & Azure Data Factory & Power BI</h2></b>
         <br />
         <h4>Consultant and trainer specializing in Power BI and Power Platform.</h4>
-        <button style={{ marginTop: "1rem", padding: "0.5rem 1rem", fontSize: "1rem", cursor: "pointer", backgroundColor: "#FFA500", color: "#fff", border: "none", borderRadius: "4px" }}>
-          Service
-        </button>
+        <a href="#services">
+          <button style={{ marginTop: "1rem", padding: "0.5rem 1rem", fontSize: "1rem", cursor: "pointer", backgroundColor: "#FFA500", color: "#fff", border: "none", borderRadius: "4px" }}>
+            Service
+          </button>
+        </a>
       </div>
       <img src={image} alt={imageAltText} style={{ width: "50%", height: "auto", objectFit: "cover", position: "absolute", right: 0, top: 0, zIndex: -1 }} />
       <div style={{ position: "absolute", bottom: "3rem", left: "50%", transform: "translateX(-50%)" }}>

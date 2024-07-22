@@ -47,6 +47,9 @@ const serviceStyles = {
   description: {
     fontSize: '1rem',
   },
+  titlet: {
+    textAlign: 'center',
+  }
 };
 
 const Service = () => {
@@ -54,6 +57,7 @@ const Service = () => {
 
   return (
     <section style={serviceStyles.container} id="services">
+    <h2 style={serviceStyles.titlet}>Experience as an expert trainer</h2>
       {services.map((service, index) => (
         <div
           key={index}
