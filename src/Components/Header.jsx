@@ -9,6 +9,13 @@ const headerStyles = {
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+  container: {
+    width: '80%',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   logo: {
     fontSize: '1.5em',
     fontWeight: 'bold',
@@ -17,6 +24,7 @@ const headerStyles = {
     listStyle: 'none',
     padding: 0,
     display: 'flex',
+    margin: 0,
   },
   navItem: {
     margin: '0 1em',
@@ -37,7 +45,7 @@ const headerStyles = {
 const Header = () => {
   return (
     <header style={headerStyles.header}>
-      <div className="container">
+      <div style={headerStyles.container}>
         <div style={headerStyles.logo}>LOGO</div>
         <nav>
           <ul style={headerStyles.navList}>
