@@ -1,0 +1,21 @@
+/* About Section Styles */
+#about {
+    padding: 2em 0;
+    background-color: #fff;
+  }
+  
+  #about h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  #about p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    color: #666;
+  }
+  
