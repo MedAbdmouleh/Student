@@ -21,10 +21,23 @@ const services = [
 const serviceStyles = {
   container: {
     display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '2rem',
+    padding: '2rem',
+  },
+  title: {
+    fontSize: '2rem',
+    fontWeight: 'bold',
+    marginBottom: '1rem',
+    textAlign: 'center',
+  },
+  serviceCards: {
+    display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: '2rem',
-    padding: '2rem',
+    width: '100%',
   },
   service: {
     width: '30%',
@@ -39,17 +52,14 @@ const serviceStyles = {
   serviceHovered: {
     transform: 'scale(1.05)',
   },
-  title: {
+  serviceTitle: {
     fontSize: '1.5rem',
     fontWeight: 'bold',
     marginBottom: '1rem',
   },
-  description: {
+  serviceDescription: {
     fontSize: '1rem',
   },
-  titlet: {
-    textAlign: 'center',
-  }
 };
 
 const Service = () => {
@@ -57,23 +67,22 @@ const Service = () => {
 
   return (
     <section style={serviceStyles.container} id="services">
-    <h2 style={serviceStyles.titlet}>Experience as an expert trainer</h2>
-    <div>
-      {services.map((service, index) => (
-        <div
-          key={index}
-          style={{
-            ...serviceStyles.service,
-            ...(hoveredIndex === index ? serviceStyles.serviceHovered : {}),
-          }}
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <h2 style={serviceStyles.title}>{service.title}</h2>
-          <p style={serviceStyles.description}>{service.description}</p>
-        </div>
-        
-      ))}
+      <h2 style={serviceStyles.title}>Services</h2>
+      <div style={serviceStyles.serviceCards}>
+        {services.map((service, index) => (
+          <div
+            key={index}
+            style={{
+              ...serviceStyles.service,
+              ...(hoveredIndex === index ? serviceStyles.serviceHovered : {}),
+            }}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <h2 style={serviceStyles.serviceTitle}>{service.title}</h2>
+            <p style={serviceStyles.serviceDescription}>{service.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

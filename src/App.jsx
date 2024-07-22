@@ -26,9 +26,9 @@ import "./styles.css";
 const siteProps = {
   name: "Abdmouleh Mohamed",
   title: "Consultant Power BI",
-  email: "Mohamed.Abdmouleh@studentambassadors.com",
+  email: "mohamedabdelmouleh0@gmail.com",
   gitHub: "MedAbdmouleh",
-  instagram: "Mohamed Abdmouleh",
+  youTube: "https://www.youtube.com/watch?v=x0HPXgSzvP8",
   linkedIn: "mohamed-abdmouleh",
   medium: "",
   twitter: "",
