@@ -9,7 +9,10 @@ import Header from "./Header";
 const Portfolio = () => {
   return (
     <div>
-      
+      <Header />
+      <Skills />
+      <Expertise />
+      <Footer />
     </div>
   );
 };
