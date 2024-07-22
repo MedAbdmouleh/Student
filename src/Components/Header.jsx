@@ -8,6 +8,10 @@ const headerStyles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    position: 'fixed', // Fixed position
+    top: 0,
+    width: '100%', // Full width
+    zIndex: 1000, // Ensure it stays above other elements
   },
   container: {
     width: '80%',
@@ -46,17 +50,20 @@ const Header = () => {
   return (
     <header style={headerStyles.header}>
       <div style={headerStyles.container}>
-        <div style={headerStyles.logo}> Microsoft Educator</div>
+        <div style={headerStyles.logo}>Microsoft Educator</div>
         <nav>
           <ul style={headerStyles.navList}>
             <li style={headerStyles.navItem}><a href="#home" style={headerStyles.navLink}>Home</a></li>
             <li style={headerStyles.navItem}><a href="#about" style={headerStyles.navLink}>About Me</a></li>
-            <li style={headerStyles.navItem}><a href="#skills" style={headerStyles.navLink}>experience</a></li>
-            <li style={headerStyles.navItem}><a href="#services" style={headerStyles.navLink}>services</a></li>
+            <li style={headerStyles.navItem}><a href="#skills" style={headerStyles.navLink}>Experience</a></li>
+            <li style={headerStyles.navItem}><a href="#services" style={headerStyles.navLink}>Services</a></li>
             <li style={headerStyles.navItem}><a href="#footer" style={headerStyles.navLink}>Contact</a></li>
           </ul>
         </nav>
-        <a href="#" style={headerStyles.btn}>Download CV</a>
+        <a href="https://example.com/path/to/Abdmouleh%20Mohamed%20-Consultant%20-%20Teach%20Lead%20BI%20(2).pdf" download style={headerStyles.btn}>
+  Download CV
+</a>
+
       </div>
     </header>
   );
