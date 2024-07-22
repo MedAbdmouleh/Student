@@ -6,7 +6,7 @@ import Expertise from "./Expertise";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Portfolio = () => {
+/* const Portfolio = () => {
   return (
     <div>
       <Header />
@@ -19,4 +19,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Portfolio; */
