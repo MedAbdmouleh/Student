@@ -4,7 +4,7 @@ import image from "../images/motion-background.jpg";
 const imageAltText = "purple and blue abstract background";
 
 const description =
-  "Consultant et formateur en Power BI/Power Platform, j'ai une expérience avérée dans la conception, le développement et la mise en œuvre de solutions BI. Fortes compétences en matière de conception de bases de données, d'extraction, de transformation et de chargement de données (ETL), de création de rapports et de visualisations, et de gestion de projet.";
+  "Consultant and trainer in Power BI and Power Platform, I have a proven track record in designing, developing, and implementing business intelligence solutions. I possess strong skills in database design, data extraction, transformation, and loading (ETL), as well as in creating reports, visualizations, and project management. Additionally, I have expertise in Azure and Azure Data Factory (ADF), enhancing my ability to deliver comprehensive data solutions.Consultant and trainer in Power BI and Power Platform, I have a proven track record in designing, developing, and implementing business intelligence solutions. I possess strong skills in database design, data extraction, transformation, and loading (ETL), as well as in creating reports, visualizations, and project management.";
 
 const skillsList = [
   "Power BI",
@@ -16,7 +16,7 @@ const skillsList = [
 ];
 
 const detailOrQuote =
-  "Ma passion pour l'analyse de données se reflète dans chacune de mes interventions. Mon objectif est d'offrir des conseils stratégiques et des formations de qualité, afin d'améliorer les performances et de favoriser une prise de décision éclairée au sein des organisations.";
+  "My passion for data analysis is evident in every project I undertake. My goal is to provide strategic advice and high-quality training to enhance performance and support informed decision-making within organizations.";
 
 const aboutStyles = {
   section: {
