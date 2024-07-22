@@ -30,17 +30,29 @@ const expertiseStyles = {
 };
 
 const expertiseList = [
-  { title: "Strategy & Direction", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { title: "Branding & Logo", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { title: "UI & UX Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { title: "Webflow Development", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+    { 
+        title: "Orange | Formateur Power BI", 
+        description: "Expert formateur spécialisé dans  Power BI." 
+      },
+      { 
+        title: "The Way Center | Formateur Power BI", 
+        description: "Formateur spécialisé dans la certification Power BI (PL-300), Power Platform, Azure, et Fabric, offrant une expertise approfondie." 
+      },
+      { 
+        title: "CTIG | Formateur Power BI", 
+        description: "Spécialiste en formation pour la certification Power BI (PL-300) avec des compétences étendues en Power Platform, Azure, et Fabric." 
+      },
+      { 
+        title: "Ruspina | Formateur Power BI", 
+        description: "Formateur expert dans la certification Power BI (PL-300) et les technologies Power Platform, Azure, et Fabric, fournissant des solutions avancées." 
+      },
 ];
 
 const Expertise = () => {
   return (
     <section style={expertiseStyles.section} id="expertise">
       <div style={expertiseStyles.container}>
-        <h2 style={expertiseStyles.title}>My Expertise</h2>
+        <h2 style={expertiseStyles.title}>Experience as an expert trainer</h2>
         <div style={expertiseStyles.expertiseCards}>
           {expertiseList.map((item, index) => (
             <div key={index} style={expertiseStyles.card}>

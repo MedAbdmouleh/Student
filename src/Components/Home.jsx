@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
  */
 import image from "../images/websitedata.png";
 
-const imageAltText = "Abdmouleh Mohamed - Consultant Power BI";
+const imageAltText = "";
 
 const Home = ({ name, title }) => {
   return (
@@ -24,11 +24,11 @@ const Home = ({ name, title }) => {
         <h1>{name}</h1>
         <h2>{title}</h2>
       </div>
-      <div style={{ position: "absolute", top: "5rem", right: "2rem", width: "20rem",textAlign: "right"}}>
+      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
         <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt={imageAltText} />
       </div>
       <div style={{ position: "absolute", top: "5rem", right: "2rem", width: "20rem", textAlign: "right" }}>
-        <p>Abdmouleh Mohamed - Consultant Power BI</p>
+        <p><b>Abdmouleh Mohamed - Consultant Power BI</b></p>
       </div>
     </section>
   );

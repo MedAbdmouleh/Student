@@ -35,18 +35,18 @@ const skillsStyles = {
 };
 
 const skillsList = [
-  { title: "Data Analysis", description: "Create user interface design with unique & modern ideas" },
-  { title: "Business Intelligence", description: "Create digital user products with updated ideas" },
-  { title: "Azure Data Factory", description: "Create advance design prototype with Figma apps." },
+  { title: "Tech lead Power BI & Power Platform & ADF - Société Amaris Consulting", description: "Leading the development of innovative Power BI solutions and ADF integrations to drive business intelligence." },
+  { title: "Consultant MSBI / Power BI | ERP - Société DELTASOFT", description: "Providing expert consultancy in MSBI and Power BI to enhance ERP systems and improve data-driven decision making." },
+  { title: "Consultant en MSBI / Power BI - Société PERFAXIS", description: "Designing and implementing advanced MSBI and Power BI solutions to streamline business processes and improve analytics capabilities." },
 ];
 
 const Skills = () => {
   return (
     <section style={skillsStyles.section} id="skills">
       <div style={skillsStyles.container}>
-        <h2 style={skillsStyles.title}>Why Hire Me For Your Next Project?</h2>
+        <h2 style={skillsStyles.title}>Experience as a consultant</h2>
         <p style={skillsStyles.description}>
-          I'm specialist in MSBI & Power BI. My passion is designing & solving problems through data analysis and business intelligence.
+          I'm specialist in MSBI & Azure Data Factory & Power BI. My passion is designing & solving problems through data analysis and business intelligence.
         </p>
         <div style={skillsStyles.skillsCards}>
           {skillsList.map((skill, index) => (
