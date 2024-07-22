@@ -10,7 +10,8 @@ const Home = ({ name, title }) => {
     <section id="home" style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: "100vh", padding: "2rem" }}>
       <div style={{ position: "relative", zIndex: 1, maxWidth: "50%", marginRight: "2rem" }}>
         <h1>{name}</h1>
-        <h2>{title}</h2>
+        <h2>Consultant MSBI & Azure Data Factory & Power BI</h2>
+        <h3>Consultant and trainer specializing in Power BI and Power Platform, I have extensive experience in designing, developing, and implementing business intelligence solutions.</h3>
         <button style={{ marginTop: "1rem", padding: "0.5rem 1rem", fontSize: "1rem", cursor: "pointer", backgroundColor: "#FFA500", color: "#fff", border: "none", borderRadius: "4px" }}>
           Service
         </button>
