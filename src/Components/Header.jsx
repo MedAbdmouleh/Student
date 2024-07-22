@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <header style={headerStyles.header}>
       <div style={headerStyles.container}>
-        <div style={headerStyles.logo}>LOGO</div>
+        <div style={headerStyles.logo}> Microsoft Educator</div>
         <nav>
           <ul style={headerStyles.navList}>
             <li style={headerStyles.navItem}><a href="#home" style={headerStyles.navLink}>Home</a></li>

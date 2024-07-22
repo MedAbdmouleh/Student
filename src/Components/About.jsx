@@ -21,7 +21,7 @@ const detailOrQuote =
 const aboutStyles = {
   section: {
     padding: '2em 0',
-    backgroundColor: '#FBE5CF',  // Updated background color
+    backgroundColor: '#FDF7F0',  // Updated background color
   },
   backgroundImg: {
     width: '100%',

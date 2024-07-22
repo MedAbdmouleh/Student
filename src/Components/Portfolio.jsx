@@ -5,6 +5,7 @@ import Skills from "./Skills";
 import Expertise from "./Expertise";
 import Footer from "./Footer";
 import Header from "./Header";
+import Certification from "./Certification";
 
 const Portfolio = () => {
   return (
@@ -12,6 +13,7 @@ const Portfolio = () => {
  
       <Skills />
       <Expertise />
+      <Certification />
       <Footer />
     </div>
   );
