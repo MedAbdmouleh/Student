@@ -1,7 +1,7 @@
 import React from "react";
 import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
-import image from "../images/medorange.png";
+import image from "../images/DSC_0617.jpg";
 
 const imageAltText = "Consultant MSBI & Azure Data Factory & Power BI";
 
