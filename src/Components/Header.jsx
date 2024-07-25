@@ -60,7 +60,7 @@ const Header = () => {
             <li style={headerStyles.navItem}><a href="#footer" style={headerStyles.navLink}>Contact</a></li>
           </ul>
         </nav>
-        <a href="#cerification" style={headerStyles.btn}>
+        <a href="#certification" style={headerStyles.btn}>
         Become Certified
         </a>
 

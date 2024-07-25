@@ -15,8 +15,8 @@ const certifications = [
 
 const certificationStyles = {
   section: {
-    padding: '2em 0',
-    backgroundColor: '#f9f9f9',
+    padding: '3em 0',
+    backgroundColor: '#f4f4f4',
     textAlign: 'center',
   },
   container: {
@@ -24,8 +24,9 @@ const certificationStyles = {
     margin: '0 auto',
   },
   title: {
-    fontSize: '2em',
-    marginBottom: '1em',
+    fontSize: '2.5em',
+    marginBottom: '1.5em',
+    color: '#333',
   },
   list: {
     listStyle: 'none',
@@ -40,16 +41,19 @@ const certificationStyles = {
   button: {
     backgroundColor: '#ff6600',
     color: '#fff',
-    padding: '0.5em 1em',
+    padding: '1em 2em',
     textDecoration: 'none',
-    borderRadius: '5px',
+    borderRadius: '30px',
     border: 'none',
     cursor: 'pointer',
-    fontSize: '1em',
-    transition: 'background-color 0.3s ease',
+    fontSize: '1.2em',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    transition: 'all 0.3s ease',
   },
   buttonHover: {
     backgroundColor: '#e65c00',
+    transform: 'translateY(-3px)',
+    boxShadow: '0 6px 10px rgba(0,0,0,0.15)',
   },
 };
 
@@ -73,7 +77,7 @@ class Certifications extends React.Component {
     return (
       <section style={certificationStyles.section} id="certification">
         <div style={certificationStyles.container}>
-          <h2 style={certificationStyles.title}>Certifications</h2>
+          <h2 style={certificationStyles.title}>Become Certified</h2>
           <ul style={certificationStyles.list}>
             {certifications.map((cert, index) => (
               <li key={index} style={certificationStyles.listItem}>
