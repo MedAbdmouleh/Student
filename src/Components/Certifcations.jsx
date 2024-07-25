@@ -1,22 +1,22 @@
 import React from "react";
 
 const certifications = [
-  "Microsoft Certified: Power BI Data Analyst Associate",
-  "Microsoft Certified: Fabric Analytics Engineer Associate (PL-300)",
-  "Microsoft Certified: Azure Data Engineer Associate (DP-600)",
-  "Microsoft Certified: Power Platform Functional Consultant Associate (PL-200)",
-  "Microsoft Certified: Power Platform Developer Associate (PL-400)",
-  "Microsoft Certified: Power Platform Solution Architect Expert (PL-600)",
-  "Microsoft Certified: Azure Administrator Associate (AZ-104)",
-  "Microsoft Certified: Azure Developer Associate (AZ-204)",
-  "Microsoft Certified: Azure AI Engineer Associate (AI-102)",
-  "Microsoft Certified: Power Automate RPA Developer Associate (PL-500)"
+  { name: "Microsoft Certified: Power BI Data Analyst Associate", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
+  { name: "Microsoft Certified: Fabric Analytics Engineer Associate (PL-300)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
+  { name: "Microsoft Certified: Azure Data Engineer Associate (DP-600)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
+  { name: "Microsoft Certified: Power Platform Functional Consultant Associate (PL-200)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
+  { name: "Microsoft Certified: Power Platform Developer Associate (PL-400)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
+  { name: "Microsoft Certified: Power Platform Solution Architect Expert (PL-600)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
+  { name: "Microsoft Certified: Azure Administrator Associate (AZ-104)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
+  { name: "Microsoft Certified: Azure Developer Associate (AZ-204)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
+  { name: "Microsoft Certified: Azure AI Engineer Associate (AI-102)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
+  { name: "Microsoft Certified: Power Automate RPA Developer Associate (PL-500)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" }
 ];
 
 const certificationStyles = {
   section: {
-    padding: '2em 0',
-    backgroundColor: '#f9f9f9',
+    padding: '3em 0',
+    backgroundColor: '#f4f4f4',
     textAlign: 'center',
   },
   container: {
@@ -24,8 +24,9 @@ const certificationStyles = {
     margin: '0 auto',
   },
   title: {
-    fontSize: '2em',
-    marginBottom: '1em',
+    fontSize: '2.5em',
+    marginBottom: '1.5em',
+    color: '#333',
   },
   list: {
     listStyle: 'none',
@@ -40,17 +41,36 @@ const certificationStyles = {
   button: {
     backgroundColor: '#ff6600',
     color: '#fff',
-    padding: '0.5em 1em',
+    padding: '1em 2em',
     textDecoration: 'none',
-    borderRadius: '5px',
+    borderRadius: '30px',
     border: 'none',
     cursor: 'pointer',
-    fontSize: '1em',
-    transition: 'background-color 0.3s ease',
+    fontSize: '1.2em',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    transition: 'all 0.3s ease',
   },
   buttonHover: {
     backgroundColor: '#e65c00',
+    transform: 'translateY(-3px)',
+    boxShadow: '0 6px 10px rgba(0,0,0,0.15)',
   },
+  generalLink: {
+    marginTop: '2em',
+    display: 'inline-block',
+    padding: '1em 2em',
+    backgroundColor: '#0078d4',
+    color: '#fff',
+    textDecoration: 'none',
+    borderRadius: '30px',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    transition: 'all 0.3s ease',
+  },
+  generalLinkHover: {
+    backgroundColor: '#005a9e',
+    transform: 'translateY(-3px)',
+    boxShadow: '0 6px 10px rgba(0,0,0,0.15)',
+  }
 };
 
 class Certifications extends React.Component {
@@ -58,6 +78,7 @@ class Certifications extends React.Component {
     super(props);
     this.state = {
       hoveredIndex: null,
+      generalLinkHovered: false,
     };
   }
 
@@ -69,15 +90,26 @@ class Certifications extends React.Component {
     this.setState({ hoveredIndex: null });
   };
 
+  handleGeneralLinkMouseEnter = () => {
+    this.setState({ generalLinkHovered: true });
+  };
+
+  handleGeneralLinkMouseLeave = () => {
+    this.setState({ generalLinkHovered: false });
+  };
+
   render() {
     return (
       <section style={certificationStyles.section} id="certification">
         <div style={certificationStyles.container}>
-          <h2 style={certificationStyles.title}>Become Certified</h2>
+          <h2 style={certificationStyles.title}>Certifications</h2>
           <ul style={certificationStyles.list}>
             {certifications.map((cert, index) => (
               <li key={index} style={certificationStyles.listItem}>
-                <button
+                <a 
+                  href={cert.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   style={{
                     ...certificationStyles.button,
                     ...(this.state.hoveredIndex === index && certificationStyles.buttonHover),
@@ -85,8 +117,8 @@ class Certifications extends React.Component {
                   onMouseEnter={() => this.handleMouseEnter(index)}
                   onMouseLeave={this.handleMouseLeave}
                 >
-                  {cert}
-                </button>
+                  {cert.name}
+                </a>
               </li>
             ))}
           </ul>
