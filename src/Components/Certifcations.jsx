@@ -49,11 +49,15 @@ const certificationStyles = {
     fontSize: '1.2em',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
     transition: 'all 0.3s ease',
+    backgroundImage: 'linear-gradient(to right, #ff7e5f, #feb47b)', // Gradient background
+    textTransform: 'uppercase', // Uppercase text
+    fontWeight: 'bold',
   },
   buttonHover: {
     backgroundColor: '#e65c00',
     transform: 'translateY(-3px)',
     boxShadow: '0 6px 10px rgba(0,0,0,0.15)',
+    backgroundImage: 'linear-gradient(to right, #ff9068, #ff7e5f)', // Gradient background on hover
   },
   generalLink: {
     marginTop: '2em',
