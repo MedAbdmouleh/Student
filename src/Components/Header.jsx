@@ -44,6 +44,19 @@ const headerStyles = {
     textDecoration: 'none',
     borderRadius: '5px',
   },
+  '@media (max-width: 768px)': {
+    list: {
+      flexDirection: 'column',
+    },
+    listItem: {
+      margin: '0.5em 0',
+    },
+    button: {
+      width: '100%',
+      padding: '1em',
+      fontSize: '1em',
+    },
+  },
 };
 
 const Header = () => {

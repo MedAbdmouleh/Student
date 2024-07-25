@@ -50,7 +50,20 @@ const certificationStyles = {
     textAlign: 'center',
     width: '100%', // Ensures the title spans the full width of the container
     marginBottom: '2rem' // Adds some space below the title
-  }
+  },
+  '@media (max-width: 768px)': {
+    list: {
+      flexDirection: 'column',
+    },
+    listItem: {
+      margin: '0.5em 0',
+    },
+    button: {
+      width: '100%',
+      padding: '1em',
+      fontSize: '1em',
+    },
+  },
 };
 
 const Certification = () => {

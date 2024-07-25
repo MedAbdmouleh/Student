@@ -123,3 +123,19 @@ img.socialIcon {
   height: 30px;
   width: 30px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .button {
+    width: 100%;
+    padding: 1em;
+    font-size: 1em;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+}

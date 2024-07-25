@@ -74,7 +74,20 @@ const certificationStyles = {
     backgroundColor: '#005a9e',
     transform: 'translateY(-3px)',
     boxShadow: '0 6px 10px rgba(0,0,0,0.15)',
-  }
+  },
+  '@media (max-width: 768px)': {
+    list: {
+      flexDirection: 'column',
+    },
+    listItem: {
+      margin: '0.5em 0',
+    },
+    button: {
+      width: '100%',
+      padding: '1em',
+      fontSize: '1em',
+    },
+  },
 };
 
 class Certifications extends React.Component {
