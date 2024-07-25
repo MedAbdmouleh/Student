@@ -1,17 +1,28 @@
+/**
+ * Application component
+ *
+ * To contain application wide settings, routes, state, etc.
+ */
 
-
-// App.jsx
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Portfolio from "./Components/Portfolio";
-import TrainingForm from "./Components/TrainingForm"; // Import the new form component
 
 import "./styles.css";
 
+/**
+ * This object represents your information. The project is set so that you
+ * only need to update these here, and values are passed a properties to the
+ * components that need that information.
+ *
+ * Update the values below with your information.
+ *
+ * If you don't have one of the social sites listed, leave it as an empty string.
+ */
 const siteProps = {
   name: "Abdmouleh Mohamed",
   title: "Consultant Power BI",
@@ -29,18 +40,13 @@ const secondaryColor = "#D2F1E4";
 
 const App = () => {
   return (
-    <Router>
-      <div id="main">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home name={siteProps.name} title={siteProps.title} />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/training" element={<TrainingForm />} /> {/* Add route for the new form */}
-        </Routes>
-        <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
-      </div>
-    </Router>
+    <div id="main">
+      <Header />
+      <Home name={siteProps.name} title={siteProps.title} />
+      <About />
+      <Portfolio />
+      <Footer {...siteProps} primaryColor={primaryColor} secondaryColor={secondaryColor} />
+    </div>
   );
 };
 

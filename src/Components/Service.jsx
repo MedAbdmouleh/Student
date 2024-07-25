@@ -11,7 +11,7 @@ const services = [
     title: "Training",
     description: "Power BI, Azure, Power Platform, MS Fabric.",
     color: "#FFA500", // Orange color for training block
-    link: "/training", // Change to route path
+    link: "mailto:mohamedabdelmouleh0@gmail.com",
   },
   {
     title: "Certification Practice Exams",
