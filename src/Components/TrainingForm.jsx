@@ -1,84 +1,128 @@
-import React, { useState } from "react";
-
-const trainingOptions = [
-  "Power BI",
-  "Azure",
-  "Power Platform",
-  "MS Fabric",
-];
+// Components/TrainingForm.jsx
+import React, { useState, useEffect } from 'react';
 
 const TrainingForm = () => {
+  const [courses, setCourses] = useState([]);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    training: trainingOptions[0],
+    name: '',
+    email: '',
+    selectedCourse: ''
   });
+
+  useEffect(() => {
+    // Fetch courses from the database (mocked example)
+    // Replace with actual API call to your Azure SQL Database
+    fetch('https://your-api-endpoint/courses')
+      .then(response => response.json())
+      .then(data => setCourses(data))
+      .catch(error => console.error('Error fetching courses:', error));
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
+    setFormData({
+      ...formData,
+      [name]: value
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    // Handle form submission (e.g., send data to the server)
+    console.log('Form submitted:', formData);
   };
 
   return (
-    <div style={{ padding: "2rem", maxWidth: "600px", margin: "0 auto" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>Training Form</h2>
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: "1rem" }}>
-          <label htmlFor="name">Name:</label>
+    <section style={formStyles.container}>
+      <h2 style={formStyles.title}>Training Form</h2>
+      <form onSubmit={handleSubmit} style={formStyles.form}>
+        <label style={formStyles.label}>
+          Name:
           <input
             type="text"
-            id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
             required
-            style={{ width: "100%", padding: "0.5rem", marginTop: "0.5rem" }}
+            style={formStyles.input}
           />
-        </div>
-        <div style={{ marginBottom: "1rem" }}>
-          <label htmlFor="email">Email:</label>
+        </label>
+        <label style={formStyles.label}>
+          Email:
           <input
             type="email"
-            id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             required
-            style={{ width: "100%", padding: "0.5rem", marginTop: "0.5rem" }}
+            style={formStyles.input}
           />
-        </div>
-        <div style={{ marginBottom: "1rem" }}>
-          <label htmlFor="training">Choose Training:</label>
+        </label>
+        <label style={formStyles.label}>
+          Select Course:
           <select
-            id="training"
-            name="training"
-            value={formData.training}
+            name="selectedCourse"
+            value={formData.selectedCourse}
             onChange={handleChange}
             required
-            style={{ width: "100%", padding: "0.5rem", marginTop: "0.5rem" }}
+            style={formStyles.select}
           >
-            {trainingOptions.map((option, index) => (
-              <option key={index} value={option}>
-                {option}
-              </option>
+            <option value="">Select a course</option>
+            {courses.map((course, index) => (
+              <option key={index} value={course.id}>{course.name}</option>
             ))}
           </select>
-        </div>
-        <button type="submit" style={{ padding: "0.5rem 2rem", backgroundColor: "#FFA500", color: "#fff", border: "none", borderRadius: "4px" }}>
-          Submit
-        </button>
+        </label>
+        <button type="submit" style={formStyles.button}>Submit</button>
       </form>
-    </div>
+    </section>
   );
+};
+
+const formStyles = {
+  container: {
+    padding: '2rem',
+    backgroundColor: '#FDF7F0',
+    maxWidth: '600px',
+    margin: '0 auto'
+  },
+  title: {
+    fontSize: '2rem',
+    fontWeight: 'bold',
+    marginBottom: '1rem',
+    textAlign: 'center',
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1rem',
+  },
+  label: {
+    display: 'flex',
+    flexDirection: 'column',
+    fontSize: '1rem',
+  },
+  input: {
+    padding: '0.5rem',
+    fontSize: '1rem',
+    borderRadius: '4px',
+    border: '1px solid #ccc',
+  },
+  select: {
+    padding: '0.5rem',
+    fontSize: '1rem',
+    borderRadius: '4px',
+    border: '1px solid #ccc',
+  },
+  button: {
+    padding: '0.5rem',
+    fontSize: '1rem',
+    color: '#fff',
+    backgroundColor: '#4E567E',
+    border: 'none',
+    borderRadius: '4px',
+    cursor: 'pointer',
+  }
 };
 
 export default TrainingForm;

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -12,7 +11,7 @@ const services = [
     title: "Training",
     description: "Power BI, Azure, Power Platform, MS Fabric.",
     color: "#FFA500", // Orange color for training block
-    link: "/training-form", // Link to training form page
+    link: "/training", // Change to route path
   },
   {
     title: "Certification Practice Exams",
@@ -78,9 +77,9 @@ const Service = () => {
       <h2 style={serviceStyles.title}>Services</h2>
       <div style={serviceStyles.serviceCards}>
         {services.map((service, index) => (
-          <Link
+          <a
             key={index}
-            to={service.link}
+            href={service.link}
             target={service.target} // Add target attribute
             rel={service.target === "_blank" ? "noopener noreferrer" : undefined} // Security best practice for new tab
             style={{
@@ -92,7 +91,7 @@ const Service = () => {
           >
             <h2 style={serviceStyles.serviceTitle}>{service.title}</h2>
             <p style={serviceStyles.serviceDescription}>{service.description}</p>
-          </Link>
+          </a>
         ))}
       </div>
     </section>
