@@ -60,8 +60,8 @@ const Header = () => {
             <li style={headerStyles.navItem}><a href="#footer" style={headerStyles.navLink}>Contact</a></li>
           </ul>
         </nav>
-        <a href="\images\Abdmouleh_Mohamed_Consultant_Teach_Lead_BI.pdf" download style={headerStyles.btn}>
-          Download CV
+        <a href="#cerification" style={headerStyles.btn}>
+        Become Certified
         </a>
 
       </div>
