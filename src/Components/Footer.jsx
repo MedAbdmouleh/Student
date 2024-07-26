@@ -18,7 +18,7 @@ import linkedInIcon from "../images/socials/linkedin.svg";
 import mediumIcon from "../images/socials/medium.svg";
 import twitterIcon from "../images/socials/twitter.svg";
 import youTubeIcon from "../images/socials/youtube.svg";
-import "src\styles.css"
+import "../images/styles.css";
 /**
  * 💡 Learning resources
  *
