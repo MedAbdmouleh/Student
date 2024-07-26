@@ -7,6 +7,7 @@ import certification5 from "../images/pl600.webp";
 import certification6 from "../images/excel.png";
 import certification7 from "../images/dp100.png";
 import certification8 from "../images/AI102.png";
+import './styles.css';
 
 const certifications = [
   { title: "Microsoft Certified: Power Platform Solution Architect Expert", image: certification5 },
@@ -51,19 +52,7 @@ const certificationStyles = {
     width: '100%', // Ensures the title spans the full width of the container
     marginBottom: '2rem' // Adds some space below the title
   },
-  '@media (max-width: 768px)': {
-    list: {
-      flexDirection: 'column',
-    },
-    listItem: {
-      margin: '0.5em 0',
-    },
-    button: {
-      width: '100%',
-      padding: '1em',
-      fontSize: '1em',
-    },
-  },
+  
 };
 
 const Certification = () => {

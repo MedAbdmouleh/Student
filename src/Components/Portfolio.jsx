@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Certification from "./Certification";
 import Service from "./Service";
+import './styles.css';
 
 const Portfolio = () => {
   return (

@@ -138,4 +138,8 @@ img.socialIcon {
   .flex {
     flex-direction: column;
   }
+
+  .section {
+    padding: 2em 0;
+  }
 }
