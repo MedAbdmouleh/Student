@@ -68,23 +68,7 @@ const serviceStyles = {
   serviceDescription: {
     fontSize: '1rem',
   },
-  '@media (min-width: 768px)': {
-    container: {
-      width: '80%',
-      padding: '3rem',
-    },
-    skillsList: {
-      columns: 2,
-      fontSize: '1.25rem',
-      margin: '2rem 3rem',
-    },
-  },
-  '@media (min-width: 1200px)': {
-    container: {
-      width: '60%',
-      padding: '4rem',
-    },
-  },
+ 
 };
 
 const Service = () => {
@@ -92,7 +76,6 @@ const Service = () => {
 
   return (
     <section style={serviceStyles.container} id="services">
-      <link rel="stylesheet" href="/src/images/styles.css" />
       <h2 style={serviceStyles.title}>Services</h2>
       <div style={serviceStyles.serviceCards}>
         {services.map((service, index) => (

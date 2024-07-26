@@ -32,23 +32,7 @@ const skillsStyles = {
   cardTitle: {
     color: '#ff6600',
   },
-  '@media (min-width: 768px)': {
-    container: {
-      width: '80%',
-      padding: '3rem',
-    },
-    skillsList: {
-      columns: 2,
-      fontSize: '1.25rem',
-      margin: '2rem 3rem',
-    },
-  },
-  '@media (min-width: 1200px)': {
-    container: {
-      width: '60%',
-      padding: '4rem',
-    },
-  },
+  
 };
 
 const skillsList = [
@@ -60,7 +44,6 @@ const skillsList = [
 const Skills = () => {
   return (
     <section style={skillsStyles.section} id="skills">
-      <link rel="stylesheet" href="/src/images/styles.css" />
       <div style={skillsStyles.container}>
         <h2 style={skillsStyles.title}>Experience as a consultant</h2>
         <p style={skillsStyles.description}>

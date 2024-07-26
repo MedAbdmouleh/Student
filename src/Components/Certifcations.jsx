@@ -89,23 +89,6 @@ const certificationStyles = {
       fontSize: '1em',
     },
   },
-  '@media (min-width: 768px)': {
-    container: {
-      width: '80%',
-      padding: '3rem',
-    },
-    skillsList: {
-      columns: 2,
-      fontSize: '1.25rem',
-      margin: '2rem 3rem',
-    },
-  },
-  '@media (min-width: 1200px)': {
-    container: {
-      width: '60%',
-      padding: '4rem',
-    },
-  },
 };
 
 class Certifications extends React.Component {
@@ -136,7 +119,6 @@ class Certifications extends React.Component {
   render() {
     return (
       <section style={certificationStyles.section} id="certification">
-        <link rel="stylesheet" href="/src/images/styles.css" />
         <div style={certificationStyles.container}>
           <h2 style={certificationStyles.title}>Certifications</h2>
           <ul style={certificationStyles.list}>

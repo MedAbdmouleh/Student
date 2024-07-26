@@ -28,23 +28,7 @@ const expertiseStyles = {
   cardTitle: {
     color: '#ff6600',
   },
-  '@media (min-width: 768px)': {
-    container: {
-      width: '80%',
-      padding: '3rem',
-    },
-    skillsList: {
-      columns: 2,
-      fontSize: '1.25rem',
-      margin: '2rem 3rem',
-    },
-  },
-  '@media (min-width: 1200px)': {
-    container: {
-      width: '60%',
-      padding: '4rem',
-    },
-  },
+  
 };
 
 const expertiseList = [
@@ -69,7 +53,6 @@ const expertiseList = [
 const Expertise = () => {
   return (
     <section style={expertiseStyles.section} id="expertise">
-      <link rel="stylesheet" href="/src/images/styles.css" />
       <div style={expertiseStyles.container}>
         <h2 style={expertiseStyles.title}>Experience as an Expert Trainer</h2>
         <div style={expertiseStyles.expertiseCards}>

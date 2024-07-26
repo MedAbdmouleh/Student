@@ -52,23 +52,7 @@ const certificationStyles = {
     width: '100%', // Ensures the title spans the full width of the container
     marginBottom: '2rem' // Adds some space below the title
   },
-  '@media (min-width: 768px)': {
-    container: {
-      width: '80%',
-      padding: '3rem',
-    },
-    skillsList: {
-      columns: 2,
-      fontSize: '1.25rem',
-      margin: '2rem 3rem',
-    },
-  },
-  '@media (min-width: 1200px)': {
-    container: {
-      width: '60%',
-      padding: '4rem',
-    },
-  },
+  
 };
 
 const Certification = () => {
