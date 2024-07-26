@@ -32,7 +32,23 @@ const skillsStyles = {
   cardTitle: {
     color: '#ff6600',
   },
-  
+  '@media (min-width: 768px)': {
+    container: {
+      width: '80%',
+      padding: '3rem',
+    },
+    skillsList: {
+      columns: 2,
+      fontSize: '1.25rem',
+      margin: '2rem 3rem',
+    },
+  },
+  '@media (min-width: 1200px)': {
+    container: {
+      width: '60%',
+      padding: '4rem',
+    },
+  },
 };
 
 const skillsList = [
