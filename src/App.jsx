@@ -3,7 +3,7 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Portfolio from "./Components/Portfolio";
-import Certifications from "./Components/Certifications";
+import Certifications from "./Components/Certifcations";
 import Footer from "./Components/Footer";
 
 const siteProps = {
