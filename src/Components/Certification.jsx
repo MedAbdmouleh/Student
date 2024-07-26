@@ -7,7 +7,7 @@ import certification5 from "../images/pl600.webp";
 import certification6 from "../images/excel.png";
 import certification7 from "../images/dp100.png";
 import certification8 from "../images/AI102.png";
-import './styles.css';
+import "./styles.css";
 
 const certifications = [
   { title: "Microsoft Certified: Power Platform Solution Architect Expert", image: certification5 },
