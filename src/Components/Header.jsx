@@ -1,5 +1,5 @@
 import React from "react";
-import "src\styles.css"
+
 
 const headerStyles = {
   header: {
@@ -51,6 +51,7 @@ const headerStyles = {
 const Header = () => {
   return (
     <header style={headerStyles.header}>
+      <link rel="stylesheet" href="/src/images/styles.css" />
       <div style={headerStyles.container}>
         <div style={headerStyles.logo}>Microsoft Educator</div>
         <nav>

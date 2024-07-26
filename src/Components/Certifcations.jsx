@@ -1,5 +1,5 @@
 import React from "react";
-import "src\styles.css"
+
 
 const certifications = [
   { name: "Microsoft Certified: Power BI Data Analyst Associate (PL-300)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
@@ -119,6 +119,7 @@ class Certifications extends React.Component {
   render() {
     return (
       <section style={certificationStyles.section} id="certification">
+        <link rel="stylesheet" href="/src/images/styles.css" />
         <div style={certificationStyles.container}>
           <h2 style={certificationStyles.title}>Certifications</h2>
           <ul style={certificationStyles.list}>

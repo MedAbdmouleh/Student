@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../images/motion-background.jpg";
-import "src\styles.css"
+
 
 const imageAltText = "purple and blue abstract background";
 
@@ -59,6 +59,7 @@ const aboutStyles = {
 const About = () => {
   return (
     <section style={aboutStyles.section} id="about">
+      <link rel="stylesheet" href="/src/images/styles.css" />
       <img className="background" src={image} alt={imageAltText} style={aboutStyles.backgroundImg} />
       <div style={aboutStyles.container}>
         <h2>About Myself</h2>

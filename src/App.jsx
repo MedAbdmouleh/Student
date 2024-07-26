@@ -14,7 +14,6 @@ import Portfolio from "./Components/Portfolio";
 import Certifications from "./Components/Certifcations";
 
 
-import "src\styles.css"
 /**
  * This object represents your information. The project is set so that you
  * only need to update these here, and values are passed a properties to the
@@ -42,6 +41,7 @@ const secondaryColor = "#D2F1E4";
 const App = () => {
   return (
     <div id="main">
+      <link rel="stylesheet" href="/src/images/styles.css" />
       <Header />
       <Home name={siteProps.name} title={siteProps.title} />
       <About />

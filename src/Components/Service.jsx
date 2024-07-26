@@ -1,5 +1,5 @@
 import React from "react";
-import "src\styles.css"
+
 
 const services = [
   {
@@ -76,6 +76,7 @@ const Service = () => {
 
   return (
     <section style={serviceStyles.container} id="services">
+      <link rel="stylesheet" href="/src/images/styles.css" />
       <h2 style={serviceStyles.title}>Services</h2>
       <div style={serviceStyles.serviceCards}>
         {services.map((service, index) => (

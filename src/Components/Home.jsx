@@ -2,13 +2,14 @@ import React from "react";
 import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
 import image from "../images/DSC_0617.jpg";
-import "src\styles.css"
+
 
 const imageAltText = "Consultant MSBI & Azure Data Factory & Power BI";
 
 const Home = ({ name, title }) => {
   return (
     <section id="home" style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: "100vh", padding: "2rem" }}>
+      <link rel="stylesheet" href="/src/images/styles.css" />
       <div style={{ position: "relative", zIndex: 1, maxWidth: "50%", marginRight: "2rem" }}>
         <h4>Hi I am</h4>
         <h2 style={{ color: "#FFA500" }}>Abdmouleh Mohamed</h2>

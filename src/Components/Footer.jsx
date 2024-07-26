@@ -18,7 +18,7 @@ import linkedInIcon from "../images/socials/linkedin.svg";
 import mediumIcon from "../images/socials/medium.svg";
 import twitterIcon from "../images/socials/twitter.svg";
 import youTubeIcon from "../images/socials/youtube.svg";
-import "../images/styles.css";
+
 /**
  * 💡 Learning resources
  *
@@ -53,6 +53,7 @@ const Footer = (props) => {
         width: "100vw"
       }}
     >
+      <link rel="stylesheet" href="/src/images/styles.css" />
       <div
         style={{
           display: "flex",

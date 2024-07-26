@@ -1,5 +1,5 @@
 import React from "react";
-import "src\styles.css"
+
 
 const expertiseStyles = {
   section: {
@@ -53,6 +53,7 @@ const expertiseList = [
 const Expertise = () => {
   return (
     <section style={expertiseStyles.section} id="expertise">
+      <link rel="stylesheet" href="/src/images/styles.css" />
       <div style={expertiseStyles.container}>
         <h2 style={expertiseStyles.title}>Experience as an Expert Trainer</h2>
         <div style={expertiseStyles.expertiseCards}>

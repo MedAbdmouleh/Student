@@ -1,5 +1,5 @@
 import React from "react";
-import "src\styles.css"
+
 const skillsStyles = {
   section: {
     backgroundColor: '#fff',
@@ -44,6 +44,7 @@ const skillsList = [
 const Skills = () => {
   return (
     <section style={skillsStyles.section} id="skills">
+      <link rel="stylesheet" href="/src/images/styles.css" />
       <div style={skillsStyles.container}>
         <h2 style={skillsStyles.title}>Experience as a consultant</h2>
         <p style={skillsStyles.description}>

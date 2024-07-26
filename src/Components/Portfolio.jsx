@@ -7,12 +7,13 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Certification from "./Certification";
 import Service from "./Service";
-import "src\styles.css"
+
 
 const Portfolio = () => {
   return (
+    
     <div>
- 
+ <link rel="stylesheet" href="/src/images/styles.css" />
       <Skills />
       <Expertise />
       <Certification />
