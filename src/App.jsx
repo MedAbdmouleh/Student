@@ -13,7 +13,7 @@ import Home from "./Components/Home";
 import Portfolio from "./Components/Portfolio";
 import Certifications from "./Components/Certifcations";
 
-import "./styles.css";
+import "../styles.css";
 
 /**
  * This object represents your information. The project is set so that you
