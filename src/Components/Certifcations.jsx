@@ -138,7 +138,7 @@ class Certifications extends React.Component {
               </li>
             ))}
           </ul>
-          <a href="#contact" style={{ 
+          <a href="#footer" style={{ 
             ...styles.generalLink, 
             ...(this.state.hoveredIndex !== null && styles.generalLinkHover) 
           }}>Contact Us</a>
