@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const headerStyles = {
   header: {
     backgroundColor: '#fff',
-    padding: '1em',
+    padding: '1em 2em',
     borderBottom: '1px solid #ddd',
     position: 'fixed',
     top: 0,
@@ -11,15 +11,18 @@ const headerStyles = {
     width: '100%',
     zIndex: 1000,
     display: 'flex',
-    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     boxSizing: 'border-box',
     transition: 'background-color 0.3s ease', // Smooth transition for background color
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)', // Subtle shadow for a modern look
   },
   logo: {
-    fontSize: '1.5em',
+    fontSize: '1.8em',
     fontWeight: 'bold',
+    color: '#333',
+    letterSpacing: '0.05em',
+    textShadow: '1px 1px 2px rgba(0,0,0,0.1)', // Subtle text shadow for the logo
   },
   navList: {
     listStyle: 'none',
@@ -34,25 +37,28 @@ const headerStyles = {
   navLink: {
     textDecoration: 'none',
     color: '#333',
-    display: 'block',
     padding: '0.5em 1em',
     borderRadius: '5px',
-    transition: 'background-color 0.3s ease, color 0.3s ease', // Smooth transition for background and text color
+    transition: 'background-color 0.3s ease, color 0.3s ease, transform 0.3s ease', // Smooth transition for background and text color
+    fontSize: '1em',
+    fontWeight: '500',
+    display: 'block',
   },
   navLinkActive: {
     backgroundColor: '#ff6600', // Orange background for active link
     color: '#fff', // White text for active link
+    transform: 'scale(1.05)', // Slight scale effect for active link
   },
   btn: {
     backgroundColor: '#ff6600',
     color: '#fff',
-    padding: '0.5em 1em',
+    padding: '0.5em 1.5em',
     textDecoration: 'none',
     borderRadius: '5px',
-    display: 'block',
-    textAlign: 'center',
     fontWeight: 'bold',
     transition: 'background-color 0.3s ease, transform 0.3s ease', // Smooth transition for button color and transform
+    fontSize: '1em',
+    display: 'block',
   },
   btnHover: {
     backgroundColor: '#e65c00', // Darker orange on hover
@@ -60,8 +66,10 @@ const headerStyles = {
   },
   menuIcon: {
     display: 'none',
-    fontSize: '1.5em',
+    fontSize: '1.8em',
     cursor: 'pointer',
+    color: '#333',
+    transition: 'color 0.3s ease', // Smooth transition for menu icon color
   },
   mobileMenu: {
     display: 'none',
@@ -156,7 +164,7 @@ const Header = () => {
             ...(window.innerWidth <= 768 && { display: 'none' }),
           }}
         >
-          {['home', 'about', 'skills', 'services', 'Contact'].map(section => (
+          {['home', 'about', 'skills', 'services', 'contact'].map(section => (
             <li key={section} style={headerStyles.navItem}>
               <a
                 href={`#${section}`}
@@ -176,7 +184,7 @@ const Header = () => {
             ...(window.innerWidth <= 768 && isMenuOpen && headerStyles.mobileMenuVisible),
           }}
         >
-          {['home', 'about', 'skills', 'services', 'footer'].map(section => (
+          {['home', 'about', 'skills', 'services', 'contact'].map(section => (
             <li key={section} style={headerStyles.mobileMenuItem}>
               <a
                 href={`#${section}`}
