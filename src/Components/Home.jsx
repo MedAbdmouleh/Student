@@ -13,7 +13,7 @@ const Home = ({ name, title }) => {
         <h4>Hi I am</h4>
         <h2 style={{ color: "#FFA500" }}>{name}</h2>
         <br />
-        <b><h2 style={{ color: "#FFA500" }}>{title}</h2></b>
+        <b><h2 style={{ color: "#FFA500" }}>Consultant MSBI & Azure Data Factory & Power BI</h2></b>
         <br />
         <h4>Consultant and trainer specializing in Power BI and Power Platform.</h4>
         <a href="#services" style={{ textDecoration: 'none' }}>
