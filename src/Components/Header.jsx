@@ -156,7 +156,7 @@ const Header = () => {
             ...(window.innerWidth <= 768 && { display: 'none' }),
           }}
         >
-          {['home', 'about', 'skills', 'services', 'footer'].map(section => (
+          {['home', 'about', 'skills', 'services', 'Contact'].map(section => (
             <li key={section} style={headerStyles.navItem}>
               <a
                 href={`#${section}`}
