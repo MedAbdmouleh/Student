@@ -33,16 +33,15 @@ const Service = () => {
     serviceCards: {
       display: 'flex',
       flexWrap: 'wrap',
-      justifyContent: isMobile ? 'center' : 'space-between',
+      justifyContent: 'center', // Center the cards horizontally
       gap: '2rem',
       width: '100%',
       maxWidth: '1200px',
       margin: '0 auto', // Center the container horizontally
-      padding: isMobile ? '1rem' : '2rem', // Adjust padding for mobile
+      padding: '2rem',
     },
     service: {
-      width: isMobile ? '90%' : '100%', // Adjust width for mobile
-      maxWidth: '300px',
+      width: isMobile ? '90%' : '300px', // Adjust width for mobile
       backgroundColor: '#FFA500',
       color: '#fff',
       padding: '2rem',

@@ -3,95 +3,32 @@ import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
 import image from "../images/DSC_0617.jpg";
 
+
 const imageAltText = "Consultant MSBI & Azure Data Factory & Power BI";
 
 const Home = ({ name, title }) => {
   return (
-    <section id="home" style={styles.section}>
+    <section id="home" style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between", minHeight: "100vh", padding: "2rem" }}>
       <link rel="stylesheet" href="/src/images/styles.css" />
-      <div style={styles.textContainer}>
-        <h4 style={styles.greeting}>Hi I am</h4>
-        <h2 style={styles.name}>{name}</h2>
-        <h2 style={styles.title}>{title}</h2>
-        <p style={styles.description}>
-          Consultant and trainer specializing in Power BI and Power Platform.
-        </p>
+      <div style={{ position: "relative", zIndex: 1, maxWidth: "50%", marginRight: "2rem" }}>
+        <h4>Hi I am</h4>
+        <h2 style={{ color: "#FFA500" }}>Abdmouleh Mohamed</h2>
+        <br/>
+        <b><h2 style={{ color: "#FFA500" }}>Consultant MSBI & Azure Data Factory & Power BI</h2></b>
+        <br />
+        <h4>Consultant and trainer specializing in Power BI and Power Platform.</h4>
         <a href="#services">
-          <button style={styles.button}>
+          <button style={{ marginTop: "1rem", padding: "0.5rem 1rem", fontSize: "1rem", cursor: "pointer", backgroundColor: "#FFA500", color: "#fff", border: "none", borderRadius: "4px" }}>
             Service
           </button>
         </a>
       </div>
-      <img src={image} alt={imageAltText} style={styles.image} />
-      <div style={styles.arrowContainer}>
-        <img src={arrowSvg} style={styles.arrow} alt="Scroll down arrow" />
+      <img src={image} alt={imageAltText} style={{ width: "50%", height: "auto", objectFit: "cover", position: "absolute", right: 0, top: 0, zIndex: -1 }} />
+      <div style={{ position: "absolute", bottom: "3rem", left: "50%", transform: "translateX(-50%)" }}>
+        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt="Scroll down arrow" />
       </div>
     </section>
   );
-};
-
-const styles = {
-  section: {
-    position: "relative",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-    minHeight: "100vh",
-    padding: "2rem",
-    textAlign: "center",
-  },
-  textContainer: {
-    position: "relative",
-    zIndex: 1,
-    maxWidth: "90%",
-  },
-  greeting: {
-    margin: 0,
-  },
-  name: {
-    color: "#FFA500",
-    margin: 0,
-    fontSize: "2rem",
-  },
-  title: {
-    color: "#FFA500",
-    margin: "0.5rem 0",
-    fontSize: "1.5rem",
-  },
-  description: {
-    margin: "1rem 0",
-  },
-  button: {
-    marginTop: "1rem",
-    padding: "0.5rem 1rem",
-    fontSize: "1rem",
-    cursor: "pointer",
-    backgroundColor: "#FFA500",
-    color: "#fff",
-    border: "none",
-    borderRadius: "4px",
-  },
-  image: {
-    width: "100%",
-    height: "auto",
-    objectFit: "cover",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    zIndex: -1,
-    display: "none",
-  },
-  arrowContainer: {
-    position: "absolute",
-    bottom: "3rem",
-    left: "50%",
-    transform: "translateX(-50%)",
-  },
-  arrow: {
-    height: "3rem",
-    width: "3rem",
-  },
 };
 
 Home.defaultProps = {
