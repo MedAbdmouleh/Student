@@ -21,9 +21,10 @@ const serviceStyles = {
     justifyContent: 'center',
     gap: '2rem',
     width: '100%',
+    maxWidth: '1200px',
   },
   service: {
-    width: '90%',
+    width: '100%',
     maxWidth: '300px',
     backgroundColor: '#FFA500',
     color: '#fff',
@@ -31,12 +32,13 @@ const serviceStyles = {
     textAlign: 'center',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    transition: 'transform 0.2s',
+    transition: 'transform 0.2s, box-shadow 0.2s',
     textDecoration: 'none',
     display: 'block',
   },
   serviceHovered: {
     transform: 'scale(1.05)',
+    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)',
   },
   serviceTitle: {
     fontSize: '1.5rem',
