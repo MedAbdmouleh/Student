@@ -48,11 +48,12 @@ class Certifications extends React.Component {
     const styles = {
       section: {
         padding: '3em 0',
-        backgroundColor: '#fff5f0', // Light orange background
+        backgroundColor: '#f7f7f7', // Light gray background
         textAlign: 'center',
       },
       container: {
-        width: '80%',
+        width: '90%',
+        maxWidth: '1200px',
         margin: '0 auto',
       },
       title: {
@@ -67,48 +68,49 @@ class Certifications extends React.Component {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        flexDirection: isMobile ? 'column' : 'row',
+        gap: '1em',
       },
       listItem: {
-        margin: isMobile ? '0.5em 0' : '1em',
         flex: '1 1 200px',
+        margin: '0.5em',
       },
       button: {
+        display: 'block',
         backgroundColor: '#ff6600', // Orange color
         color: '#fff',
-        padding: isMobile ? '1em' : '1em 2em',
+        padding: '0.75em 1.5em',
         textDecoration: 'none',
-        borderRadius: '30px',
+        borderRadius: '25px',
         border: 'none',
         cursor: 'pointer',
-        fontSize: isMobile ? '1em' : '1.2em',
-        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+        fontSize: '1em',
+        fontWeight: 'bold',
+        boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
         transition: 'all 0.3s ease',
         backgroundImage: 'linear-gradient(to right, #ff7e5f, #feb47b)', // Gradient background
         textTransform: 'uppercase', // Uppercase text
-        fontWeight: 'bold',
       },
       buttonHover: {
         backgroundColor: '#e65c00',
         transform: 'translateY(-3px)',
-        boxShadow: '0 6px 10px rgba(0,0,0,0.15)',
+        boxShadow: '0 6px 12px rgba(0,0,0,0.3)',
         backgroundImage: 'linear-gradient(to right, #ff9068, #ff7e5f)', // Gradient background on hover
       },
       generalLink: {
-        marginTop: '2em',
         display: 'inline-block',
-        padding: isMobile ? '1em' : '1em 2em',
+        padding: '0.75em 1.5em',
         backgroundColor: '#0078d4',
         color: '#fff',
         textDecoration: 'none',
-        borderRadius: '30px',
-        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+        borderRadius: '25px',
+        boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
         transition: 'all 0.3s ease',
+        fontWeight: 'bold',
       },
       generalLinkHover: {
         backgroundColor: '#005a9e',
         transform: 'translateY(-3px)',
-        boxShadow: '0 6px 10px rgba(0,0,0,0.15)',
+        boxShadow: '0 6px 12px rgba(0,0,0,0.3)',
       },
     };
 
