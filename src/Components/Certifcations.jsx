@@ -89,6 +89,9 @@ class Certifications extends React.Component {
         transition: 'all 0.3s ease',
         backgroundImage: 'linear-gradient(to right, #ff7e5f, #feb47b)', // Gradient background
         textTransform: 'uppercase', // Uppercase text
+        width: '100%', // Ensures the button takes full width of its container
+        minWidth: '200px', // Standard minimum width
+        textAlign: 'center',
       },
       buttonHover: {
         backgroundColor: '#e65c00',

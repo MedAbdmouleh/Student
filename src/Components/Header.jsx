@@ -5,15 +5,16 @@ const headerStyles = {
     backgroundColor: '#fff',
     padding: '1em',
     borderBottom: '1px solid #ddd',
-    position: 'fixed', // Fixed position
+    position: 'fixed',
     top: 0,
     left: 0,
-    width: '100%', // Full width
-    zIndex: 1000, // Ensure it stays above other elements
+    width: '100%',
+    zIndex: 1000,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    boxSizing: 'border-box', // Add this for padding and border to be included in the width
   },
   logo: {
     fontSize: '1.5em',
@@ -37,7 +38,7 @@ const headerStyles = {
     transition: 'background-color 0.3s ease',
   },
   navLinkActive: {
-    backgroundColor: '#f4f4f4', // Change background color for active section
+    backgroundColor: '#f4f4f4',
   },
   btn: {
     backgroundColor: '#ff6600',
@@ -48,15 +49,48 @@ const headerStyles = {
     display: 'block',
     textAlign: 'center',
   },
+  menuIcon: {
+    display: 'none',
+    fontSize: '1.5em',
+    cursor: 'pointer',
+  },
+  mobileMenu: {
+    display: 'none',
+    listStyle: 'none',
+    padding: 0,
+    margin: 0,
+    position: 'absolute',
+    top: '100%',
+    right: 0,
+    backgroundColor: '#fff',
+    border: '1px solid #ddd',
+    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+    width: '100%',
+  },
+  mobileMenuItem: {
+    padding: '1em',
+    textAlign: 'center',
+  },
+  mobileMenuLink: {
+    textDecoration: 'none',
+    color: '#333',
+  },
+  mobileMenuVisible: {
+    display: 'block',
+  },
+  menuIconVisible: {
+    display: 'block',
+  },
 };
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleScroll = () => {
     const sections = document.querySelectorAll('section');
     let currentSection = '';
-    
+
     sections.forEach(section => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
@@ -69,19 +103,45 @@ const Header = () => {
     setActiveSection(currentSection);
   };
 
+  const handleResize = () => {
+    if (window.innerWidth > 768) {
+      setIsMenuOpen(false);
+    }
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header style={headerStyles.header}>
       <div style={headerStyles.logo}>Microsoft Educator</div>
+      <div
+        style={{
+          ...headerStyles.menuIcon,
+          ...(window.innerWidth <= 768 && headerStyles.menuIconVisible),
+        }}
+        onClick={toggleMenu}
+      >
+        ☰
+      </div>
       <nav>
-        <ul style={headerStyles.navList}>
+        <ul style={{
+          ...headerStyles.navList,
+          ...(window.innerWidth <= 768 && !isMenuOpen && { display: 'none' }),
+        }}>
           <li style={headerStyles.navItem}>
-            <a 
-              href="#home" 
+            <a
+              href="#home"
               style={{
                 ...headerStyles.navLink,
                 ...(activeSection === 'home' && headerStyles.navLinkActive),
@@ -91,8 +151,8 @@ const Header = () => {
             </a>
           </li>
           <li style={headerStyles.navItem}>
-            <a 
-              href="#about" 
+            <a
+              href="#about"
               style={{
                 ...headerStyles.navLink,
                 ...(activeSection === 'about' && headerStyles.navLinkActive),
@@ -102,8 +162,8 @@ const Header = () => {
             </a>
           </li>
           <li style={headerStyles.navItem}>
-            <a 
-              href="#skills" 
+            <a
+              href="#skills"
               style={{
                 ...headerStyles.navLink,
                 ...(activeSection === 'skills' && headerStyles.navLinkActive),
@@ -113,8 +173,8 @@ const Header = () => {
             </a>
           </li>
           <li style={headerStyles.navItem}>
-            <a 
-              href="#services" 
+            <a
+              href="#services"
               style={{
                 ...headerStyles.navLink,
                 ...(activeSection === 'services' && headerStyles.navLinkActive),
@@ -124,12 +184,79 @@ const Header = () => {
             </a>
           </li>
           <li style={headerStyles.navItem}>
-            <a 
-              href="#footer" 
+            <a
+              href="#footer"
               style={{
                 ...headerStyles.navLink,
                 ...(activeSection === 'footer' && headerStyles.navLinkActive),
               }}
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+        <ul
+          style={{
+            ...headerStyles.mobileMenu,
+            ...(window.innerWidth <= 768 && isMenuOpen && headerStyles.mobileMenuVisible),
+          }}
+        >
+          <li style={headerStyles.mobileMenuItem}>
+            <a
+              href="#home"
+              style={{
+                ...headerStyles.mobileMenuLink,
+                ...(activeSection === 'home' && headerStyles.navLinkActive),
+              }}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </a>
+          </li>
+          <li style={headerStyles.mobileMenuItem}>
+            <a
+              href="#about"
+              style={{
+                ...headerStyles.mobileMenuLink,
+                ...(activeSection === 'about' && headerStyles.navLinkActive),
+              }}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Me
+            </a>
+          </li>
+          <li style={headerStyles.mobileMenuItem}>
+            <a
+              href="#skills"
+              style={{
+                ...headerStyles.mobileMenuLink,
+                ...(activeSection === 'skills' && headerStyles.navLinkActive),
+              }}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Experience
+            </a>
+          </li>
+          <li style={headerStyles.mobileMenuItem}>
+            <a
+              href="#services"
+              style={{
+                ...headerStyles.mobileMenuLink,
+                ...(activeSection === 'services' && headerStyles.navLinkActive),
+              }}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Services
+            </a>
+          </li>
+          <li style={headerStyles.mobileMenuItem}>
+            <a
+              href="#footer"
+              style={{
+                ...headerStyles.mobileMenuLink,
+                ...(activeSection === 'footer' && headerStyles.navLinkActive),
+              }}
+              onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </a>
