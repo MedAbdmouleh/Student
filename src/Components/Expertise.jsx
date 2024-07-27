@@ -68,8 +68,7 @@ const Expertise = () => {
             <div
               key={index}
               style={expertiseStyles.card}
-              onMouseEnter={(e) => (e.currentTarget.style = expertiseStyles.cardHover)}
-              onMouseLeave={(e) => (e.currentTarget.style = expertiseStyles.card)}
+             
             >
               <h3 style={expertiseStyles.cardTitle}>{item.title}</h3>
               <p>{item.description}</p>
