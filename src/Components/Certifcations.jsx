@@ -48,7 +48,7 @@ class Certifications extends React.Component {
     const styles = {
       section: {
         padding: '3em 0',
-        backgroundColor: '#f4f4f4',
+        backgroundColor: '#fff5f0', // Light orange background
         textAlign: 'center',
       },
       container: {
@@ -58,7 +58,8 @@ class Certifications extends React.Component {
       title: {
         fontSize: '2.5em',
         marginBottom: '1.5em',
-        color: '#333',
+        color: '#ff6600', // Orange color for title
+        fontWeight: 'bold',
       },
       list: {
         listStyle: 'none',
@@ -73,7 +74,7 @@ class Certifications extends React.Component {
         flex: '1 1 200px',
       },
       button: {
-        backgroundColor: '#ff6600',
+        backgroundColor: '#ff6600', // Orange color
         color: '#fff',
         padding: isMobile ? '1em' : '1em 2em',
         textDecoration: 'none',
@@ -134,6 +135,7 @@ class Certifications extends React.Component {
               </li>
             ))}
           </ul>
+          <a href="#contact" style={{ ...styles.generalLink, ...(this.state.hoveredIndex !== null && styles.generalLinkHover) }}>Contact Us</a>
         </div>
       </section>
     );
