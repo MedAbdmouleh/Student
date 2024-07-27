@@ -48,7 +48,7 @@ class Certifications extends React.Component {
     const styles = {
       section: {
         padding: '3em 0',
-        backgroundColor: '#f7f7f7', // Light gray background
+        backgroundColor: '#f4f4f4', // Light gray background
         textAlign: 'center',
       },
       container: {
@@ -78,39 +78,40 @@ class Certifications extends React.Component {
         display: 'inline-block',
         backgroundColor: '#ff6600', // Orange color
         color: '#fff',
-        padding: '0.75em 1.5em',
+        padding: '1em 2em',
         textDecoration: 'none',
-        borderRadius: '30px', // Rounded corners
+        borderRadius: '8px', // Rounded corners
         border: 'none',
         cursor: 'pointer',
         fontSize: '1em',
         fontWeight: 'bold',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.2)', // Increased shadow for a floating effect
+        boxShadow: '0 4px 8px rgba(0,0,0,0.2)', // Increased shadow for a floating effect
         transition: 'all 0.3s ease',
         backgroundImage: 'linear-gradient(to right, #ff7e5f, #feb47b)', // Gradient background
         textTransform: 'uppercase', // Uppercase text
+        textAlign: 'center',
       },
       buttonHover: {
         backgroundColor: '#e65c00',
         transform: 'translateY(-3px)',
-        boxShadow: '0 6px 16px rgba(0,0,0,0.3)',
+        boxShadow: '0 6px 12px rgba(0,0,0,0.3)',
         backgroundImage: 'linear-gradient(to right, #ff9068, #ff7e5f)', // Gradient background on hover
       },
       generalLink: {
         display: 'inline-block',
-        padding: '0.75em 1.5em',
+        padding: '1em 2em',
         backgroundColor: '#0078d4',
         color: '#fff',
         textDecoration: 'none',
-        borderRadius: '30px', // Rounded corners
-        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+        borderRadius: '8px', // Rounded corners
+        boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
         transition: 'all 0.3s ease',
         fontWeight: 'bold',
       },
       generalLinkHover: {
         backgroundColor: '#005a9e',
         transform: 'translateY(-3px)',
-        boxShadow: '0 6px 16px rgba(0,0,0,0.3)',
+        boxShadow: '0 6px 12px rgba(0,0,0,0.3)',
       },
     };
 
@@ -137,7 +138,10 @@ class Certifications extends React.Component {
               </li>
             ))}
           </ul>
-          <a href="#contact" style={{ ...styles.generalLink, ...(this.state.hoveredIndex !== null && styles.generalLinkHover) }}>Contact Us</a>
+          <a href="#contact" style={{ 
+            ...styles.generalLink, 
+            ...(this.state.hoveredIndex !== null && styles.generalLinkHover) 
+          }}>Contact Us</a>
         </div>
       </section>
     );

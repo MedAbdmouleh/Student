@@ -1,74 +1,77 @@
 import React from "react";
 
-const serviceStyles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '2rem',
-    padding: '2rem',
-    backgroundColor: '#FDF7F0',
-  },
-  title: {
-    fontSize: '2rem',
-    fontWeight: 'bold',
-    marginBottom: '1rem',
-    textAlign: 'center',
-  },
-  serviceCards: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    gap: '2rem',
-    width: '100%',
-    maxWidth: '1200px',
-    margin: '0 auto', // Center the container horizontally
-  },
-  service: {
-    width: '100%',
-    maxWidth: '300px',
-    backgroundColor: '#FFA500',
-    color: '#fff',
-    padding: '2rem',
-    textAlign: 'center',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    transition: 'transform 0.2s, box-shadow 0.2s',
-    textDecoration: 'none',
-    display: 'block',
-  },
-  serviceHovered: {
-    transform: 'scale(1.05)',
-    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)',
-  },
-  serviceTitle: {
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-    marginBottom: '1rem',
-  },
-  serviceDescription: {
-    fontSize: '1rem',
-  },
-  // Add media query for mobile view
-  '@media (max-width: 768px)': {
-    serviceCards: {
-      justifyContent: 'center', // Center items horizontally in mobile view
-      padding: '1rem', // Adjust padding for mobile
-    },
-    service: {
-      width: '90%', // Adjust width for mobile
-    },
-  },
-};
-
-const services = [
-  { title: "Consulting", description: "Data Engineering, Azure, Power BI, and more.", link: "mailto:mohamedabdelmouleh0@gmail.com" },
-  { title: "Training", description: "Power BI, Azure, Power Platform, MS Fabric.", link: "#certification" },
-  { title: "Certification Practice Exams", description: "Selling mock exams with real certification questions and answers.", link: "https://www.udemy.com/user/abdmoulehmohamed/", target: "_blank" },
-];
-
 const Service = () => {
   const [hoveredIndex, setHoveredIndex] = React.useState(null);
+  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const serviceStyles = {
+    container: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '2rem',
+      padding: '2rem',
+      backgroundColor: '#FDF7F0',
+    },
+    title: {
+      fontSize: '2rem',
+      fontWeight: 'bold',
+      marginBottom: '1rem',
+      textAlign: 'center',
+    },
+    serviceCards: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      justifyContent: isMobile ? 'center' : 'space-between',
+      gap: '2rem',
+      width: '100%',
+      maxWidth: '1200px',
+      margin: '0 auto', // Center the container horizontally
+      padding: isMobile ? '1rem' : '2rem', // Adjust padding for mobile
+    },
+    service: {
+      width: isMobile ? '90%' : '100%', // Adjust width for mobile
+      maxWidth: '300px',
+      backgroundColor: '#FFA500',
+      color: '#fff',
+      padding: '2rem',
+      textAlign: 'center',
+      borderRadius: '8px',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      transition: 'transform 0.2s, box-shadow 0.2s',
+      textDecoration: 'none',
+      display: 'block',
+    },
+    serviceHovered: {
+      transform: 'scale(1.05)',
+      boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)',
+    },
+    serviceTitle: {
+      fontSize: '1.5rem',
+      fontWeight: 'bold',
+      marginBottom: '1rem',
+    },
+    serviceDescription: {
+      fontSize: '1rem',
+    },
+  };
+
+  const services = [
+    { title: "Consulting", description: "Data Engineering, Azure, Power BI, and more.", link: "mailto:mohamedabdelmouleh0@gmail.com" },
+    { title: "Training", description: "Power BI, Azure, Power Platform, MS Fabric.", link: "#certification" },
+    { title: "Certification Practice Exams", description: "Selling mock exams with real certification questions and answers.", link: "https://www.udemy.com/user/abdmoulehmohamed/", target: "_blank" },
+  ];
 
   return (
     <section style={serviceStyles.container} id="services">
