@@ -1,51 +1,68 @@
 import React from "react";
+import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
 import image from "../images/DSC_0617.jpg";
-import arrowSvg from "../images/down-arrow.svg";
 
 const imageAltText = "Consultant MSBI & Azure Data Factory & Power BI";
 
 const Home = ({ name, title }) => {
-  const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
+  return (
+    <section id="home" style={styles.section}>
+      <link rel="stylesheet" href="/src/images/styles.css" />
+      <div style={styles.textContainer}>
+        <h4 style={styles.greeting}>Hi I am</h4>
+        <h2 style={styles.name}>{name}</h2>
+        <h2 style={styles.title}>{title}</h2>
+        <p style={styles.description}>
+          Consultant and trainer specializing in Power BI and Power Platform.
+        </p>
+        <a href="#services">
+          <button style={styles.button}>
+            Service
+          </button>
+        </a>
+      </div>
+      <img src={image} alt={imageAltText} style={styles.image} />
+      <div style={styles.arrowContainer}>
+        <img src={arrowSvg} style={styles.arrow} alt="Scroll down arrow" />
+      </div>
+    </section>
+  );
+};
 
-  React.useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const containerStyle = {
+const styles = {
+  section: {
     position: "relative",
     display: "flex",
-    flexDirection: isMobile ? "column" : "row",
     alignItems: "center",
-    justifyContent: isMobile ? "center" : "space-between",
+    justifyContent: "center",
+    flexDirection: "column",
     minHeight: "100vh",
     padding: "2rem",
-    textAlign: isMobile ? "center" : "left",
-  };
-
-  const textContainerStyle = {
+    textAlign: "center",
+  },
+  textContainer: {
     position: "relative",
     zIndex: 1,
-    maxWidth: isMobile ? "90%" : "50%",
-    marginRight: isMobile ? "0" : "2rem",
-  };
-
-  const imageStyle = {
-    width: isMobile ? "100%" : "50%",
-    height: "auto",
-    objectFit: "cover",
-    position: "absolute",
-    right: 0,
-    top: 0,
-    zIndex: -1,
-  };
-
-  const buttonStyle = {
+    maxWidth: "90%",
+  },
+  greeting: {
+    margin: 0,
+  },
+  name: {
+    color: "#FFA500",
+    margin: 0,
+    fontSize: "2rem",
+  },
+  title: {
+    color: "#FFA500",
+    margin: "0.5rem 0",
+    fontSize: "1.5rem",
+  },
+  description: {
+    margin: "1rem 0",
+  },
+  button: {
     marginTop: "1rem",
     padding: "0.5rem 1rem",
     fontSize: "1rem",
@@ -54,34 +71,27 @@ const Home = ({ name, title }) => {
     color: "#fff",
     border: "none",
     borderRadius: "4px",
-  };
-
-  const scrollDownStyle = {
+  },
+  image: {
+    width: "100%",
+    height: "auto",
+    objectFit: "cover",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    zIndex: -1,
+    display: "none",
+  },
+  arrowContainer: {
     position: "absolute",
     bottom: "3rem",
     left: "50%",
     transform: "translateX(-50%)",
-  };
-
-  return (
-    <section id="home" style={containerStyle}>
-      <div style={textContainerStyle}>
-        <h4>Hi I am</h4>
-        <h2 style={{ color: "#FFA500" }}>{name}</h2>
-        <br />
-        <b><h2 style={{ color: "#FFA500" }}>{title}</h2></b>
-        <br />
-        <h4>Consultant and trainer specializing in Power BI and Power Platform.</h4>
-        <a href="#services">
-          <button style={buttonStyle}>Service</button>
-        </a>
-      </div>
-      <img src={image} alt={imageAltText} style={imageStyle} />
-      <div style={scrollDownStyle}>
-        <img src={arrowSvg} style={{ height: "3rem", width: "3rem" }} alt="Scroll down arrow" />
-      </div>
-    </section>
-  );
+  },
+  arrow: {
+    height: "3rem",
+    width: "3rem",
+  },
 };
 
 Home.defaultProps = {
