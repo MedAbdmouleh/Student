@@ -1,123 +1,97 @@
 import React from "react";
+import certification1 from "../images/pl300.jpg"; // Replace with your actual image paths
+import certification2 from "../images/pl200.png";
+import certification3 from "../images/fabric.png";
+import certification4 from "../images/pl500.webp";
+import certification5 from "../images/pl600.webp";
+import certification6 from "../images/excel.png";
+import certification7 from "../images/dp100.png";
+import certification8 from "../images/AI102.png";
 
 const certifications = [
-  { name: "Microsoft Certified: Power BI Data Analyst Associate (PL-300)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
-  { name: "Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
-  { name: "Microsoft Certified: Azure Data Engineer Associate (DP-203)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
-  { name: "Microsoft Certified: Power Platform Functional Consultant Associate (PL-200)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
-  { name: "Microsoft Certified: Power Platform Developer Associate (PL-400)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
-  { name: "Microsoft Certified: Power Platform Solution Architect Expert (PL-600)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
-  { name: "Microsoft Certified: Azure Administrator Associate (AZ-104)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
-  { name: "Microsoft Certified: Azure Developer Associate (AZ-204)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
-  { name: "Microsoft Certified: Azure AI Engineer Associate (AI-102)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
-  { name: "Microsoft Certified: Power Automate RPA Developer Associate (PL-500)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" }
+  { title: "Microsoft Certified: Power Platform Solution Architect Expert", image: certification5, alt: "Power Platform Solution Architect Expert Certification" },
+  { title: "Microsoft Certified: Power BI Data Analyst Associate", image: certification1, alt: "Power BI Data Analyst Associate Certification" },
+  { title: "Microsoft Certified: Azure Data Scientist Associate", image: certification7, alt: "Azure Data Scientist Associate Certification" },
+  { title: "Microsoft Office Specialist: Microsoft Excel Expert", image: certification6, alt: "Microsoft Excel Expert Certification" },
+  { title: "Microsoft Certified: Azure AI Engineer Associate", image: certification8, alt: "Azure AI Engineer Associate Certification" },
+  { title: "Microsoft Certified: Power Automate RPA Developer Associate", image: certification4, alt: "Power Automate RPA Developer Associate Certification" },
+  { title: "Microsoft Certified: Fabric Analytics Engineer Associate", image: certification3, alt: "Fabric Analytics Engineer Associate Certification" },
+  { title: "Microsoft Certified: Power Platform Functional Consultant Associate", image: certification2, alt: "Power Platform Functional Consultant Associate Certification" }
 ];
 
 const certificationStyles = {
-  section: {
-    padding: '3em 0',
-    backgroundColor: '#f4f4f4',
-    textAlign: 'center',
-  },
   container: {
-    width: '80%',
-    margin: '0 auto',
-  },
-  title: {
-    fontSize: '2.5em',
-    marginBottom: '1.5em',
-    color: '#333',
-  },
-  list: {
-    listStyle: 'none',
-    padding: 0,
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    gap: '2rem',
+    padding: '2rem'
   },
-  listItem: {
-    margin: '1em',
+  certification: {
+    width: '20%',
+    textAlign: 'center',
+    marginBottom: '2rem',
+    border: '1px solid #d3d3d3', // Light gray border
+    borderRadius: '8px', // Rounded corners
+    padding: '1rem', // Space between border and content
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Optional shadow for better appearance
+    transition: 'transform 0.2s', // Smooth transition on hover
   },
-  button: {
-    backgroundColor: '#ff6600',
-    color: '#fff',
-    padding: '1em 2em',
-    textDecoration: 'none',
-    borderRadius: '30px',
-    border: 'none',
-    cursor: 'pointer',
-    fontSize: '1.2em',
-    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-    transition: 'all 0.3s ease',
-    backgroundImage: 'linear-gradient(to right, #ff7e5f, #feb47b)', // Gradient background
-    textTransform: 'uppercase', // Uppercase text
+  image: {
+    width: '150px', // Fixed width
+    height: '150px', // Fixed height
+    objectFit: 'contain' // Ensure the image fits within the specified dimensions
+  },
+  title: {
+    marginTop: '0.5rem',
+    fontSize: '1.2rem',
+    fontWeight: 'bold'
+  },
+  titlet: {
+    textAlign: 'center',
+    width: '100%', // Ensures the title spans the full width of the container
+    marginBottom: '2rem', // Adds some space below the title
+    fontSize: '2rem',
     fontWeight: 'bold',
   },
-  buttonHover: {
-    backgroundColor: '#e65c00',
-    transform: 'translateY(-3px)',
-    boxShadow: '0 6px 10px rgba(0,0,0,0.15)',
-    backgroundImage: 'linear-gradient(to right, #ff9068, #ff7e5f)', // Gradient background on hover
-  },
   '@media (max-width: 768px)': {
-    list: {
-      flexDirection: 'column',
+    certification: {
+      width: '45%', // Adjust width for smaller screens
     },
-    listItem: {
-      margin: '0.5em 0',
+    image: {
+      width: '100px', // Adjust image size for smaller screens
+      height: '100px',
     },
-    button: {
-      width: '100%',
-      padding: '1em',
-      fontSize: '1em',
+    title: {
+      fontSize: '1rem',
+    },
+  },
+  '@media (max-width: 480px)': {
+    certification: {
+      width: '100%', // Full width for very small screens
+    },
+    image: {
+      width: '80px', // Adjust image size for very small screens
+      height: '80px',
+    },
+    title: {
+      fontSize: '0.8rem',
     },
   },
 };
 
-class Certifications extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hoveredIndex: null,
-    };
-  }
-
-  handleMouseEnter = (index) => {
-    this.setState({ hoveredIndex: index });
-  };
-
-  handleMouseLeave = () => {
-    this.setState({ hoveredIndex: null });
-  };
-
-  render() {
-    return (
-      <section style={certificationStyles.section} id="certification">
-        <div style={certificationStyles.container}>
-          <h2 style={certificationStyles.title}>Become Certified</h2>
-          <ul style={certificationStyles.list}>
-            {certifications.map((cert, index) => (
-              <li key={index} style={certificationStyles.listItem}>
-                <a 
-                  href={cert.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  style={{
-                    ...certificationStyles.button,
-                    ...(this.state.hoveredIndex === index && certificationStyles.buttonHover),
-                  }}
-                  onMouseEnter={() => this.handleMouseEnter(index)}
-                  onMouseLeave={this.handleMouseLeave}
-                >
-                  {cert.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+const Certification = () => {
+  return (
+    <section style={certificationStyles.container} id="certifications">
+      <h2 style={certificationStyles.titlet}>Certifications</h2>
+      {certifications.map((certification, index) => (
+        <div key={index} style={certificationStyles.certification}>
+          <img src={certification.image} alt={certification.alt} style={certificationStyles.image} />
+          <p style={certificationStyles.title}>{certification.title}</p>
         </div>
-      </section>
-    );
-  }
-}
+      ))}
+    </section>
+  );
+};
 
-export default Certifications;
+export default Certification;
