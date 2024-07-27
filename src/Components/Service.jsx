@@ -34,7 +34,7 @@ const Service = () => {
       display: 'flex',
       flexDirection: 'row',
       flexWrap: 'wrap',
-      justifyContent: isMobile ? 'center' : 'space-between',
+      justifyContent: 'center', // Center items horizontally
       gap: '2rem',
       width: '100%',
       maxWidth: '1200px',
