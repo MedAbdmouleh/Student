@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const certifications = [
   { name: "Microsoft Certified: Power BI Data Analyst Associate (PL-300)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
   { name: "Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
@@ -38,6 +37,7 @@ const certificationStyles = {
   },
   listItem: {
     margin: '1em',
+    flex: '1 1 200px',
   },
   button: {
     backgroundColor: '#ff6600',

@@ -46,7 +46,7 @@ const Certification = () => {
   const certificationStyles = {
     section: {
       padding: '2em 1em', // Adjusted padding for better responsiveness
-      backgroundColor: '#FDF7F0', // Added background color
+      backgroundColor: '#FFFFFF', // Changed background color to white
     },
     container: {
       display: 'flex',
