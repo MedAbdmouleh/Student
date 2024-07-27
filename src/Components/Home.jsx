@@ -3,7 +3,6 @@ import arrowSvg from "../images/down-arrow.svg";
 import PropTypes from "prop-types";
 import image from "../images/DSC_0617.jpg";
 
-
 const imageAltText = "Consultant MSBI & Azure Data Factory & Power BI";
 
 const Home = ({ name, title }) => {
@@ -12,13 +11,30 @@ const Home = ({ name, title }) => {
       <link rel="stylesheet" href="/src/images/styles.css" />
       <div style={{ position: "relative", zIndex: 1, maxWidth: "50%", marginRight: "2rem" }}>
         <h4>Hi I am</h4>
-        <h2 style={{ color: "#FFA500" }}>Abdmouleh Mohamed</h2>
-        <br/>
-        <b><h2 style={{ color: "#FFA500" }}>Consultant MSBI & Azure Data Factory & Power BI</h2></b>
+        <h2 style={{ color: "#FFA500" }}>{name}</h2>
+        <br />
+        <b><h2 style={{ color: "#FFA500" }}>{title}</h2></b>
         <br />
         <h4>Consultant and trainer specializing in Power BI and Power Platform.</h4>
-        <a href="#services">
-          <button style={{ marginTop: "1rem", padding: "0.5rem 1rem", fontSize: "1rem", cursor: "pointer", backgroundColor: "#FFA500", color: "#fff", border: "none", borderRadius: "4px" }}>
+        <a href="#services" style={{ textDecoration: 'none' }}>
+          <button style={{
+            marginTop: "1rem",
+            padding: "0.75rem 1.5rem",
+            fontSize: "1rem",
+            cursor: "pointer",
+            backgroundColor: "#E65C00", // Dark orange
+            color: "#fff",
+            border: "none",
+            borderRadius: "8px",
+            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+            transition: "background-color 0.3s ease, transform 0.3s ease",
+            textAlign: "center",
+            fontWeight: "bold",
+            textTransform: "uppercase",
+            outline: "none",
+            display: "inline-block",
+            lineHeight: "1.5",
+          }}>
             Service
           </button>
         </a>
