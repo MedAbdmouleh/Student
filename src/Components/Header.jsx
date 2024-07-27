@@ -25,6 +25,7 @@ const headerStyles = {
     padding: 0,
     margin: 0,
     display: 'flex',
+    flexDirection: 'row', // Ensure horizontal layout for larger screens
   },
   navItem: {
     margin: '0 1em',
@@ -66,6 +67,7 @@ const headerStyles = {
     border: '1px solid #ddd',
     boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
     width: '100%',
+    flexDirection: 'column', // Stack items vertically for mobile menu
   },
   mobileMenuItem: {
     padding: '1em',
@@ -76,7 +78,7 @@ const headerStyles = {
     color: '#333',
   },
   mobileMenuVisible: {
-    display: 'block',
+    display: 'flex', // Show menu as a flex container when open
   },
   menuIconVisible: {
     display: 'block',
@@ -135,10 +137,12 @@ const Header = () => {
         ☰
       </div>
       <nav>
-        <ul style={{
-          ...headerStyles.navList,
-          ...(window.innerWidth <= 768 && !isMenuOpen && { display: 'none' }),
-        }}>
+        <ul
+          style={{
+            ...headerStyles.navList,
+            ...(window.innerWidth <= 768 && { display: 'none' }), // Hide horizontal menu on small screens
+          }}
+        >
           <li style={headerStyles.navItem}>
             <a
               href="#home"

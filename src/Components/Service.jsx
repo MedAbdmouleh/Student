@@ -22,6 +22,7 @@ const serviceStyles = {
     gap: '2rem',
     width: '100%',
     maxWidth: '1200px',
+    margin: '0 auto', // Center the container horizontally
   },
   service: {
     width: '100%',
@@ -47,6 +48,16 @@ const serviceStyles = {
   },
   serviceDescription: {
     fontSize: '1rem',
+  },
+  // Add media query for mobile view
+  '@media (max-width: 768px)': {
+    serviceCards: {
+      justifyContent: 'center', // Center items horizontally in mobile view
+      padding: '1rem', // Adjust padding for mobile
+    },
+    service: {
+      width: '90%', // Adjust width for mobile
+    },
   },
 };
 

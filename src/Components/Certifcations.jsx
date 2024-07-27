@@ -68,35 +68,32 @@ class Certifications extends React.Component {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        gap: '1em',
+        gap: '1.5em',
       },
       listItem: {
-        flex: '1 1 200px',
+        flex: '1 1 220px', // Adjusted width for better responsiveness
         margin: '0.5em',
       },
       button: {
-        display: 'block',
+        display: 'inline-block',
         backgroundColor: '#ff6600', // Orange color
         color: '#fff',
         padding: '0.75em 1.5em',
         textDecoration: 'none',
-        borderRadius: '25px',
+        borderRadius: '30px', // Rounded corners
         border: 'none',
         cursor: 'pointer',
         fontSize: '1em',
         fontWeight: 'bold',
-        boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.2)', // Increased shadow for a floating effect
         transition: 'all 0.3s ease',
         backgroundImage: 'linear-gradient(to right, #ff7e5f, #feb47b)', // Gradient background
         textTransform: 'uppercase', // Uppercase text
-        width: '100%', // Ensures the button takes full width of its container
-        minWidth: '200px', // Standard minimum width
-        textAlign: 'center',
       },
       buttonHover: {
         backgroundColor: '#e65c00',
         transform: 'translateY(-3px)',
-        boxShadow: '0 6px 12px rgba(0,0,0,0.3)',
+        boxShadow: '0 6px 16px rgba(0,0,0,0.3)',
         backgroundImage: 'linear-gradient(to right, #ff9068, #ff7e5f)', // Gradient background on hover
       },
       generalLink: {
@@ -105,15 +102,15 @@ class Certifications extends React.Component {
         backgroundColor: '#0078d4',
         color: '#fff',
         textDecoration: 'none',
-        borderRadius: '25px',
-        boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+        borderRadius: '30px', // Rounded corners
+        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
         transition: 'all 0.3s ease',
         fontWeight: 'bold',
       },
       generalLinkHover: {
         backgroundColor: '#005a9e',
         transform: 'translateY(-3px)',
-        boxShadow: '0 6px 12px rgba(0,0,0,0.3)',
+        boxShadow: '0 6px 16px rgba(0,0,0,0.3)',
       },
     };
 
