@@ -7,7 +7,7 @@ const serviceStyles = {
     alignItems: 'center',
     gap: '2rem',
     padding: '2rem',
-    backgroundColor: '#FFFFFF', // Changed background color to white
+    backgroundColor: '#FDF7F0',
   },
   title: {
     fontSize: '2rem',

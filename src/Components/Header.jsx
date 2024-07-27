@@ -1,42 +1,47 @@
 import React from "react";
 
-
 const headerStyles = {
   header: {
     backgroundColor: '#fff',
     padding: '1em 0',
     borderBottom: '1px solid #ddd',
     display: 'flex',
-    justifyContent: 'space-between',
+    flexDirection: 'column', // Stack items vertically on small screens
+    justifyContent: 'center',
     alignItems: 'center',
-    position: 'fixed', // Fixed position
+    position: 'fixed',
     top: 0,
-    width: '100%', // Full width
-    zIndex: 1000, // Ensure it stays above other elements
+    width: '100%',
+    zIndex: 1000,
   },
   container: {
     width: '80%',
     margin: '0 auto',
     display: 'flex',
-    justifyContent: 'space-between',
+    flexDirection: 'column', // Stack items vertically on small screens
+    justifyContent: 'center',
     alignItems: 'center',
+    textAlign: 'center',
   },
   logo: {
     fontSize: '1.5em',
     fontWeight: 'bold',
+    marginBottom: '0.5em', // Space between logo and nav
   },
   navList: {
     listStyle: 'none',
     padding: 0,
+    margin: '0.5em 0', // Space around nav items
     display: 'flex',
-    margin: 0,
+    flexDirection: 'column', // Stack nav items vertically on small screens
   },
   navItem: {
-    margin: '0 1em',
+    margin: '0.5em 0', // Space between nav items
   },
   navLink: {
     textDecoration: 'none',
     color: '#333',
+    fontSize: '1em',
   },
   btn: {
     backgroundColor: '#ff6600',
@@ -44,14 +49,30 @@ const headerStyles = {
     padding: '0.5em 1em',
     textDecoration: 'none',
     borderRadius: '5px',
+    marginTop: '1em', // Space above button
   },
- 
+  // Media queries for responsiveness
+  '@media (min-width: 768px)': {
+    header: {
+      flexDirection: 'row', // Horizontal layout on larger screens
+    },
+    container: {
+      flexDirection: 'row', // Horizontal layout on larger screens
+      justifyContent: 'space-between', // Space between logo and nav
+      alignItems: 'center',
+    },
+    navList: {
+      flexDirection: 'row', // Horizontal layout for nav items on larger screens
+    },
+    navItem: {
+      margin: '0 1em', // Horizontal margin for nav items
+    },
+  },
 };
 
 const Header = () => {
   return (
     <header style={headerStyles.header}>
-      <link rel="stylesheet" href="/src/images/styles.css" />
       <div style={headerStyles.container}>
         <div style={headerStyles.logo}>Microsoft Educator</div>
         <nav>
@@ -64,9 +85,8 @@ const Header = () => {
           </ul>
         </nav>
         <a href="#certification" style={headerStyles.btn}>
-        Become Certified
+          Become Certified
         </a>
-
       </div>
     </header>
   );
