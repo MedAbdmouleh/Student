@@ -1,28 +1,5 @@
 import React from "react";
 
-
-const services = [
-  {
-    title: "Consulting",
-    description: "Data Engineering, Azure, Power BI, and more.",
-    color: "#FFA500", // Orange color for consulting block
-    link: "mailto:mohamedabdelmouleh0@gmail.com",
-  },
-  {
-    title: "Training",
-    description: "Power BI, Azure, Power Platform, MS Fabric.",
-    color: "#FFA500", // Orange color for training block
-    link: "#certification",
-  },
-  {
-    title: "Certification Practice Exams",
-    description: "Selling mock exams with real certification questions and answers.",
-    color: "#FFA500", // Orange color for practice exams block
-    link: "https://www.udemy.com/user/abdmoulehmohamed/",
-    target: "_blank", // Open in new tab
-  },
-];
-
 const serviceStyles = {
   container: {
     display: 'flex',
@@ -30,7 +7,7 @@ const serviceStyles = {
     alignItems: 'center',
     gap: '2rem',
     padding: '2rem',
-    backgroundColor: '#FDF7F0', // Background color for the section
+    backgroundColor: '#FDF7F0',
   },
   title: {
     fontSize: '2rem',
@@ -46,16 +23,17 @@ const serviceStyles = {
     width: '100%',
   },
   service: {
-    width: '30%',
-    backgroundColor: '#FFA500', // Orange background color
+    width: '90%',
+    maxWidth: '300px',
+    backgroundColor: '#FFA500',
     color: '#fff',
     padding: '2rem',
     textAlign: 'center',
     borderRadius: '8px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     transition: 'transform 0.2s',
-    textDecoration: 'none', // Ensure no underline or default link styles
-    display: 'block', // Make sure the whole block is clickable
+    textDecoration: 'none',
+    display: 'block',
   },
   serviceHovered: {
     transform: 'scale(1.05)',
@@ -68,8 +46,13 @@ const serviceStyles = {
   serviceDescription: {
     fontSize: '1rem',
   },
- 
 };
+
+const services = [
+  { title: "Consulting", description: "Data Engineering, Azure, Power BI, and more.", link: "mailto:mohamedabdelmouleh0@gmail.com" },
+  { title: "Training", description: "Power BI, Azure, Power Platform, MS Fabric.", link: "#certification" },
+  { title: "Certification Practice Exams", description: "Selling mock exams with real certification questions and answers.", link: "https://www.udemy.com/user/abdmoulehmohamed/", target: "_blank" },
+];
 
 const Service = () => {
   const [hoveredIndex, setHoveredIndex] = React.useState(null);

@@ -3,36 +3,52 @@ import React from "react";
 const skillsStyles = {
   section: {
     backgroundColor: '#fff',
-    padding: '2em 0',
+    padding: '2em 1em', // Added padding for smaller screens
   },
   container: {
-    width: '80%',
+    width: '90%', // Adjusted width for better responsiveness
+    maxWidth: '1200px', // Added maxWidth to maintain a good layout on large screens
     margin: '0 auto',
+    textAlign: 'center',
   },
   title: {
-    textAlign: 'center',
+    fontSize: '2rem',
+    marginBottom: '0.5em',
   },
   description: {
-    textAlign: 'center',
-    maxWidth: '600px',
-    margin: '0 auto',
+    maxWidth: '700px', // Increased maxWidth for better readability
+    margin: '0 auto 2em',
+    fontSize: '1rem',
+    color: '#555',
   },
   skillsCards: {
     display: 'flex',
-    justifyContent: 'space-around',
-    marginTop: '2em',
+    flexWrap: 'wrap',
+    justifyContent: 'center', // Centered items for better alignment
+    gap: '1em',
   },
   card: {
     backgroundColor: '#f4f4f4',
-    padding: '1em',
-    borderRadius: '5px',
+    padding: '1.5em',
+    borderRadius: '8px',
     textAlign: 'center',
-    width: '30%',
+    width: '100%',
+    maxWidth: '300px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
   },
   cardTitle: {
     color: '#ff6600',
+    fontSize: '1.2rem',
+    marginBottom: '0.5em',
   },
-  
+  // Hover effect using CSS-in-JS
+  cardHover: {
+    ':hover': {
+      transform: 'scale(1.05)',
+      boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)',
+    },
+  },
 };
 
 const skillsList = [
@@ -45,13 +61,17 @@ const Skills = () => {
   return (
     <section style={skillsStyles.section} id="skills">
       <div style={skillsStyles.container}>
-        <h2 style={skillsStyles.title}>Experience as a consultant</h2>
+        <h2 style={skillsStyles.title}>Experience as a Consultant</h2>
         <p style={skillsStyles.description}>
-          I'm specialist in MSBI & Azure Data Factory & Power BI. My passion is designing & solving problems through data analysis and business intelligence.
+          I'm a specialist in MSBI, Azure Data Factory, and Power BI. My passion is designing & solving problems through data analysis and business intelligence.
         </p>
         <div style={skillsStyles.skillsCards}>
           {skillsList.map((skill, index) => (
-            <div key={index} style={skillsStyles.card}>
+            <div
+              key={index}
+              style={skillsStyles.card}
+              className="card-hover"
+            >
               <h3 style={skillsStyles.cardTitle}>{skill.title}</h3>
               <p>{skill.description}</p>
             </div>
