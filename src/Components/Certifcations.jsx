@@ -1,5 +1,4 @@
-import React from "react";
-import { useWindowSize } from "../useWindowSize"; // Assume this hook is defined as shown earlier
+import React, { useState } from "react";
 
 const certifications = [
   { name: "Microsoft Certified: Power BI Data Analyst Associate (PL-300)", link: "https://forms.office.com/Pages/ResponsePage.aspx?id=oBzDhDusrk6tEVGdgCM-b6BKYgA2cu5Np6oUIlX8d5dUMkE2QTVPVDBFMVdGQlpIQjBVOVI2REIySy4u" },
@@ -15,7 +14,15 @@ const certifications = [
 ];
 
 const Certifications = () => {
-  const { width } = useWindowSize();
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
 
   const certificationStyles = {
     section: {
@@ -28,7 +35,7 @@ const Certifications = () => {
       margin: '0 auto',
     },
     title: {
-      fontSize: width < 768 ? '2em' : '2.5em',
+      fontSize: '2.5em',
       marginBottom: '1.5em',
       color: '#333',
     },
@@ -40,18 +47,19 @@ const Certifications = () => {
       justifyContent: 'center',
     },
     listItem: {
-      margin: width < 768 ? '0.5em 0' : '1em',
-      width: width < 768 ? '100%' : 'auto',
+      margin: '1em',
+      width: '100%',
+      maxWidth: '300px',
     },
     button: {
       backgroundColor: '#ff6600',
       color: '#fff',
-      padding: width < 768 ? '0.5em 1em' : '1em 2em',
+      padding: '1em 2em',
       textDecoration: 'none',
       borderRadius: '30px',
       border: 'none',
       cursor: 'pointer',
-      fontSize: width < 768 ? '1em' : '1.2em',
+      fontSize: '1.2em',
       boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
       transition: 'all 0.3s ease',
       backgroundImage: 'linear-gradient(to right, #ff7e5f, #feb47b)', // Gradient background
@@ -79,10 +87,10 @@ const Certifications = () => {
                 rel="noopener noreferrer"
                 style={{
                   ...certificationStyles.button,
-                  ...(this.state.hoveredIndex === index && certificationStyles.buttonHover),
+                  ...(hoveredIndex === index && certificationStyles.buttonHover),
                 }}
-                onMouseEnter={() => this.handleMouseEnter(index)}
-                onMouseLeave={this.handleMouseLeave}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
               >
                 {cert.name}
               </a>
