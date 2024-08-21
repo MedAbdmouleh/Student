@@ -22,7 +22,7 @@ const Home = ({ name, title }) => {
             padding: "0.75rem 1.5rem",
             fontSize: "1rem",
             cursor: "pointer",
-            backgroundColor: "#E65C00", // Dark orange
+            backgroundColor: "#E65C00", // Dark oranges
             color: "#fff",
             border: "none",
             borderRadius: "8px",
